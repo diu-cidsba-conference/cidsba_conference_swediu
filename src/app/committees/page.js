@@ -17,7 +17,8 @@ import {
   publicityChairs,
   publicationChairs,
   localArrangementChairs,
-  webAndITChairs,
+  webAndITChair,
+  webAndITCoChairs,
 } from '@/data/committees';
 
 export default function Committees() {
@@ -69,7 +70,8 @@ export default function Committees() {
           <CommitteeSection title="Publicity chairs" members={publicityChairs} columns={2} />
           <CommitteeSection title="Publication chairs" members={publicationChairs} columns={2} />
           <CommitteeSection title="Local arrangement chairs" members={localArrangementChairs} columns={2} />
-          <CommitteeSection title="Web and IT support chairs" members={webAndITChairs} columns={2} />
+          <CommitteeSection title="Web and IT support chair" members={webAndITChair} columns={2} />
+          <CommitteeSection title="Web and IT support co-chairs" members={webAndITCoChairs} columns={2} />
         </div>
       </div>
     </div>

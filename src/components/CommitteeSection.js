@@ -8,6 +8,9 @@ export default function CommitteeSection({ title, members, columns = 2 }) {
       <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-5`}>
         {members.map((member, index) => (
           <div key={index} className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_12px_30px_rgba(13,27,61,0.04)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(13,27,61,0.08)]">
+            {member.track && (
+              <span className="mb-2 inline-block text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">{member.track}</span>
+            )}
             <h3 className="text-lg font-bold text-slate-900">{member.name || 'To be announced'}</h3>
             {(member.designation || member.institution) && (
               <p className="mt-2 leading-7 text-slate-600">{member.designation || member.institution}</p>

@@ -20,24 +20,47 @@ export const patronData = {
   ]
 };
 
-// New section — PDF table currently has no names listed.
 export const internationalAdvisoryCommittee = [
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" }
+  { name: "Dr. Christophe Simon", institution: "CRAN, University of Lorraine, France" },
+  { name: "Dr. Miguel Enrique Campusano Araya", institution: "MMMI, University of Southern Denmark, Denmark" },
+  { name: "Dr. Aisha Umair", institution: "MMMI, University of Southern Denmark, Denmark" },
+  { name: "Dr. Petr Panfilov", institution: "HSE University, Russia" },
+  { name: "Dr. Mouhaydine Tlemçani", institution: "University of Evora, Portugal" },
+  { name: "Dr. Mohammad Ataul Karim", institution: "University of Massachusetts Dartmouth, USA" },
+  { name: "Dr. Muhammad Usama Islam", institution: "Metropolitan State University, USA" },
+  // PDF text is ambiguous here ("Dr Mr. Soliman") — appears to give only a
+  // surname with a duplicated title. Confirm the full name before publishing.
+  { name: "Mr. Soliman", institution: "Prince of Songkla University, Thailand" },
+  { name: "Dr. Nguyen Thi Uyen", institution: "Thuongmai University, Vietnam" },
+  // PDF text is ambiguous here ("Dr, Wan Rahiman Yosof Rahiman") — unclear if
+  // this is one person's full name. Confirm before publishing.
+  { name: "Dr. Wan Rahiman Yosof Rahiman", institution: "Universiti Sains Malaysia, Malaysia" },
+  { name: "Dr. Jungpil Shin", institution: "University of Aizu, Japan" },
+  { name: "Dr. Tomio Takara", institution: "University of the Ryukyus, Japan" },
+  { name: "Dr. Syed Mohammed Shamsul Islam", institution: "Edith Cowan University, Australia" },
+  { name: "Professor Dr. Wenyu Chen", institution: "University of Electronic Science and Technology of China, China" },
+  { name: "Dr. Michael Goh (Kah Ong Michael Goh)", institution: "Multimedia University (MMU), Malaysia" },
+  { name: "Dr. Watshara Shoombuatong", institution: "Mahidol University, Thailand" },
+  { name: "Dr. Zahereel Ishwar Abdul Khalib", institution: "Faculty of Intelligent Computing, Universiti Malaysia Perlis, Perlis, Malaysia" },
+  { name: "Dr. Syed Zulkarnain Syed Idrus", institution: "Universiti Malaysia Perlis (UniMAP), Malaysia" }
 ];
 
-// New section — PDF table currently has no names listed.
 export const nationalAdvisoryCommittee = [
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" }
+  { name: "Dr. Chowdhury Mofizur Rahman", institution: "CSE, BRAC University, Dhaka" },
+  { name: "Dr. Dewan Md. Farid", institution: "CSE, United International University, Dhaka" },
+  { name: "Dr. Mohammod Abul Kashem", institution: "CSE, Dhaka University of Engineering and Technology (DUET)" },
+  { name: "Dr. Boshir Ahmed", institution: "CSE, Rajshahi University of Engineering & Technology (RUET)" },
+  { name: "Dr. Mohammad Abu Yusuf", institution: "IIT, Jahangirnagar University, Bangladesh" },
+  { name: "Dr. Mohammad Shorif Uddin", institution: "CSE, Jahangirnagar University, Bangladesh" },
+  { name: "Dr. Swakkhar Shatabda", institution: "CSE, BRAC University, Dhaka" },
+  { name: "Dr. Mohammad Kaykobad", institution: "CSE, BRAC University, Dhaka" },
+  { name: "Professor Dr. Md Rabiul Islam", institution: "CSE, Rajshahi University of Engineering & Technology (RUET)" },
+  { name: "Professor Dr. Md. Zulfiker Mahmud", institution: "CSE, Jagannath University" },
+  { name: "Professor Dr. Md. Abu Layek", institution: "Chairman, CSE, Jagannath University" },
+  { name: "Prof. Dr. Rashed Mustafa", institution: "CSE, Chittagong University" },
+  { name: "Dr. Md. Abdulla Al Mamun", institution: "CSE, Hajee Mohammad Danesh Science & Technology University, Dinajpur" },
+  { name: "Dr. Mohammed Nasir Uddin", institution: "CSE, Jagannath University" },
+  { name: "Dr. Rashed Majumdar", institution: "IIT, Jahangirnagar University, Bangladesh" }
 ];
 
 export const conferenceChairs = [
@@ -88,27 +111,27 @@ export const organizingChairs = [
 
 export const organizingCoChairs = [
   {
+    name: "Professor Dr. A. H. M. Saifullah Sadi",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    name: "Dr. Mohammad Manzurul Islam",
+    institution: "Research Activity Coordinator, IEEE CIS BDC, East West University (EWU)"
+  }
+];
+
+export const organizingSecretaries = [
+  {
+    name: "Dr. Md. Fazla Elahe",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
     name: "Dr. Md. Abdul Kader",
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
     name: "Dr. Shabnom Mustary",
     institution: "Daffodil International University (DIU), Bangladesh"
-  }
-];
-
-export const organizingSecretaries = [
-  {
-    name: "Professor Dr. A. H. M. Saifullah Sadi",
-    institution: "Daffodil International University (DIU), Bangladesh"
-  },
-  {
-    name: "Dr. Md. Fazla Elahe",
-    institution: "Daffodil International University (DIU), Bangladesh"
-  },
-  {
-    name: "Dr. Mohammad Manzurul Islam",
-    institution: "Research Activity Coordinator, IEEE CIS BDC, East West University (EWU)"
   }
 ];
 
@@ -133,7 +156,8 @@ export const technicalCoChairs = [
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
-    name: "Dr. Mohammad Kamal Hossain Foraji",
+    // Replaces Dr. Mohammad Kamal Hossain Foraji per amendment PDF.
+    name: "Md. Selim Reza",
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
@@ -157,15 +181,32 @@ export const technicalSecretaries = [
   }
 ];
 
-// New section — PDF table lists institution ("Daffodil International
-// University (DIU), Bangladesh") for each row but no names yet.
 export const trackChairs = [
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" },
-  { name: "", institution: "" }
+  {
+    track: "Track 1: Computational Intelligence and Intelligent Systems",
+    name: "Dr. Masud Rana Rashel",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    track: "Track 2: Machine Learning, Deep Learning and Data Science",
+    name: "Dr. Md. Manzurul Hasan",
+    institution: "American International University (AIUB), Bangladesh"
+  },
+  {
+    track: "Track 3: Intelligent Business Data Analytics and Decision Support",
+    name: "Dr. Hadaate Ullah",
+    institution: "University of Science and Technology Chittagong (USTC), Bangladesh"
+  },
+  {
+    track: "Track 4: Intelligent Applications in Health, Bioinformatics and Smart Systems",
+    name: "Dr. Md Zahid Hasan",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    track: "Track 5: Emerging Technologies and Responsible Intelligent Computing",
+    name: "Dr. Mohammad Rezwanul Huq",
+    institution: "East West University (EWU), Bangladesh"
+  }
 ];
 
 export const financeChairs = [
@@ -201,10 +242,6 @@ export const registrationChairs = [
 export const publicityChairs = [
   {
     name: "Professor Dr. Mohammad Mobarak Hossain",
-    institution: "Daffodil International University (DIU), Bangladesh"
-  },
-  {
-    name: "Mr. Md. Shohel Arman",
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
@@ -244,9 +281,16 @@ export const localArrangementChairs = [
   }
 ];
 
-// "Web and IT Support Chairs" in the PDF — this is the single source for
-// the website's "Web & IT chairs" section (they are the same committee).
-export const webAndITChairs = [
+// Per the amendment PDF, "Web and IT support" is split into a singular
+// chair and a separate co-chairs group.
+export const webAndITChair = [
+  {
+    name: "Md. Shohel Arman",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  }
+];
+
+export const webAndITCoChairs = [
   {
     name: "Mr. Md. Rashedul Alam",
     institution: "Daffodil International University (DIU), Bangladesh"
