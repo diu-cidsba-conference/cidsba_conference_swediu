@@ -286,13 +286,6 @@ export const localArrangementChairs = [
   }
 ];
 
-// Per the amendment PDF, "Web and IT support" is split into a singular
-// chair and a separate co-chairs group.
-// Md. Shohel Arman moved to Technical co-chairs — this role is currently vacant.
-export const webAndITChair = [
-  { name: "", institution: "" }
-];
-
 export const webAndITCoChairs = [
   {
     name: "Mr. Md. Rashedul Alam",
