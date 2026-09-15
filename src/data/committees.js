@@ -163,6 +163,11 @@ export const technicalCoChairs = [
   {
     name: "Dr. Md. Shafikul Islam",
     institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    // Moved from Web and IT support chair per user request.
+    name: "Md. Shohel Arman",
+    institution: "Daffodil International University (DIU), Bangladesh"
   }
 ];
 
@@ -283,11 +288,9 @@ export const localArrangementChairs = [
 
 // Per the amendment PDF, "Web and IT support" is split into a singular
 // chair and a separate co-chairs group.
+// Md. Shohel Arman moved to Technical co-chairs — this role is currently vacant.
 export const webAndITChair = [
-  {
-    name: "Md. Shohel Arman",
-    institution: "Daffodil International University (DIU), Bangladesh"
-  }
+  { name: "", institution: "" }
 ];
 
 export const webAndITCoChairs = [
