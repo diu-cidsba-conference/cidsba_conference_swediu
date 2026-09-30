@@ -25,7 +25,7 @@ export const internationalAdvisoryCommittee = [
   { name: "Dr. Miguel Enrique Campusano Araya", institution: "MMMI, University of Southern Denmark, Denmark" },
   { name: "Dr. Aisha Umair", institution: "MMMI, University of Southern Denmark, Denmark" },
   { name: "Dr. Petr Panfilov", institution: "HSE University, Russia" },
-  { name: "Dr. Mouhaydine Tlemçani", institution: "University of Evora, Portugal" },
+  { name: "Dr. Teresa Gonçalves", institution: "University of Evora, Portugal" },
   { name: "Dr. Mohammad Ataul Karim", institution: "University of Massachusetts Dartmouth, USA" },
   { name: "Dr. Muhammad Usama Islam", institution: "Metropolitan State University, USA" },
   // PDF text is ambiguous here ("Dr Mr. Soliman") — appears to give only a
@@ -46,21 +46,25 @@ export const internationalAdvisoryCommittee = [
 ];
 
 export const nationalAdvisoryCommittee = [
-  { name: "Dr. Chowdhury Mofizur Rahman", institution: "CSE, BRAC University, Dhaka" },
-  { name: "Dr. Dewan Md. Farid", institution: "CSE, United International University, Dhaka" },
-  { name: "Dr. Mohammod Abul Kashem", institution: "CSE, Dhaka University of Engineering and Technology (DUET)" },
-  { name: "Dr. Boshir Ahmed", institution: "CSE, Rajshahi University of Engineering & Technology (RUET)" },
-  { name: "Dr. Mohammad Abu Yusuf", institution: "IIT, Jahangirnagar University, Bangladesh" },
-  { name: "Dr. Mohammad Shorif Uddin", institution: "CSE, Jahangirnagar University, Bangladesh" },
-  { name: "Dr. Swakkhar Shatabda", institution: "CSE, BRAC University, Dhaka" },
-  { name: "Dr. Mohammad Kaykobad", institution: "CSE, BRAC University, Dhaka" },
+  { name: "Professor Dr. Chowdhury Mofizur Rahman", institution: "CSE, BRAC University, Dhaka" },
+  { name: "Professor Dr. Dip Nandi", institution: "CSE, American International University-Bangladesh" },
+  { name: "Professor Dr. Khandaker Tabin Hasan", institution: "CSE, American International University-Bangladesh" },
+  { name: "Professor Dr. Shamim H Ripon", institution: "East West University" },
+  { name: "Professor Dr. Dewan Md. Farid", institution: "CSE, United International University, Dhaka" },
+  { name: "Professor Dr. Mohammod Abul Kashem", institution: "CSE, Dhaka University of Engineering and Technology (DUET)" },
+  { name: "Professor Dr. Boshir Ahmed", institution: "CSE, Rajshahi University of Engineering & Technology (RUET)" },
+  { name: "Professor Dr. Mohammad Abu Yusuf", institution: "IIT, Jahangirnagar University, Bangladesh" },
+  { name: "Professor Dr. Mohammad Shorif Uddin", institution: "CSE, Jahangirnagar University, Bangladesh" },
+  { name: "Professor Dr. Swakkhar Shatabda", institution: "CSE, BRAC University, Dhaka" },
+  { name: "Professor Dr. Mohammad Kaykobad", institution: "CSE, BRAC University, Dhaka" },
   { name: "Professor Dr. Md Rabiul Islam", institution: "CSE, Rajshahi University of Engineering & Technology (RUET)" },
+  { name: "Professor Dr. MM Mahbubul Syeed", institution: "CSE, Independent University Bangladesh" },
   { name: "Professor Dr. Md. Zulfiker Mahmud", institution: "CSE, Jagannath University" },
   { name: "Professor Dr. Md. Abu Layek", institution: "Chairman, CSE, Jagannath University" },
-  { name: "Prof. Dr. Rashed Mustafa", institution: "CSE, Chittagong University" },
-  { name: "Dr. Md. Abdulla Al Mamun", institution: "CSE, Hajee Mohammad Danesh Science & Technology University, Dinajpur" },
-  { name: "Dr. Mohammed Nasir Uddin", institution: "CSE, Jagannath University" },
-  { name: "Dr. Rashed Majumdar", institution: "IIT, Jahangirnagar University, Bangladesh" }
+  { name: "Professor Dr. Rashed Mustafa", institution: "CSE, Chittagong University" },
+  { name: "Professor Dr. Md. Abdulla Al Mamun", institution: "CSE, Hajee Mohammad Danesh Science & Technology University, Dinajpur" },
+  { name: "Professor Dr. Mohammed Nasir Uddin", institution: "CSE, Jagannath University" },
+  { name: "Professor Dr. Rashed Majumdar", institution: "IIT, Jahangirnagar University, Bangladesh" }
 ];
 
 export const conferenceChairs = [
@@ -156,8 +160,8 @@ export const technicalCoChairs = [
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
-    // Replaces Dr. Mohammad Kamal Hossain Foraji per amendment PDF.
-    name: "Md. Selim Reza",
+    // Swapped places with Md. Selim Reza per committee update PDF.
+    name: "Md. Shohel Arman",
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
@@ -165,8 +169,8 @@ export const technicalCoChairs = [
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
-    // Moved from Web and IT support chair per user request.
-    name: "Md. Shohel Arman",
+    // Replaces Dr. Mohammad Kamal Hossain Foraji per amendment PDF.
+    name: "Md. Selim Reza",
     institution: "Daffodil International University (DIU), Bangladesh"
   }
 ];
@@ -182,6 +186,10 @@ export const technicalSecretaries = [
   },
   {
     name: "Md. Ashek -Al- Aziz",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    name: "Mr. Md. Sadekur Rahman",
     institution: "Daffodil International University (DIU), Bangladesh"
   }
 ];
@@ -233,13 +241,24 @@ export const registrationChairs = [
   {
     name: "Mr. Md. Khaled Sohel",
     institution: "Daffodil International University (DIU), Bangladesh"
+  }
+];
+
+export const registrationCoChairs = [
+  {
+    name: "Mr. Md. Suhag Ali",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    name: "Mr. Fazla Rabby Raihan",
+    institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
     name: "Mr. K. M. Shahriar Islam",
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
-    name: "Mr. Fazla Rabby Raihan",
+    name: "Mr. Arif Faisal",
     institution: "Daffodil International University (DIU), Bangladesh"
   }
 ];
@@ -255,6 +274,10 @@ export const publicityChairs = [
   },
   {
     name: "Ms. Shahrin Islam",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    name: "Mr. Bibhas Roy Chowdhury Piyas",
     institution: "Daffodil International University (DIU), Bangladesh"
   }
 ];
@@ -281,12 +304,16 @@ export const localArrangementChairs = [
     institution: "Daffodil International University (DIU), Bangladesh"
   },
   {
-    name: "Mr. Md. Suhag Ali",
+    name: "Ms. Tapushe Rabaya Toma",
+    institution: "Daffodil International University (DIU), Bangladesh"
+  },
+  {
+    name: "Mr. Musabbir Hasan Sammak",
     institution: "Daffodil International University (DIU), Bangladesh"
   }
 ];
 
-export const webAndITCoChairs = [
+export const webAndITChairs = [
   {
     name: "Mr. Md. Rashedul Alam",
     institution: "Daffodil International University (DIU), Bangladesh"

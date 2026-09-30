@@ -110,6 +110,13 @@ export default function Contact() {
             </div>
           </div>
         </div>
+
+        <div id="travel" className="mx-auto mt-12 max-w-6xl scroll-mt-28 rounded-[2rem] bg-white p-8 shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
+          <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Accommodation & transportation</h2>
+          <p className="mt-4 leading-7 text-slate-600">
+            To be announced. Details on accommodation options and transportation to the venue will be published here once finalized.
+          </p>
+        </div>
       </div>
     </div>
   );

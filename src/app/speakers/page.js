@@ -1,5 +1,5 @@
 import SpeakerCard from '@/components/SpeakerCard';
-import { keynoteSpeakers, invitedSpeakers } from '@/data/speakers';
+import { keynoteSpeakers } from '@/data/speakers';
 
 export default function Speakers() {
   return (
@@ -18,15 +18,6 @@ export default function Speakers() {
             <h2 className="text-center text-3xl font-black text-slate-900 md:text-4xl">Keynote speakers</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {keynoteSpeakers.map((speaker) => (
-                <SpeakerCard key={speaker.id} {...speaker} />
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-center text-3xl font-black text-slate-900 md:text-4xl">Invited speakers</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {invitedSpeakers.map((speaker) => (
                 <SpeakerCard key={speaker.id} {...speaker} />
               ))}
             </div>

@@ -14,10 +14,11 @@ import {
   trackChairs,
   financeChairs,
   registrationChairs,
+  registrationCoChairs,
   publicityChairs,
   publicationChairs,
   localArrangementChairs,
-  webAndITCoChairs,
+  webAndITChairs,
 } from '@/data/committees';
 
 export default function Committees() {
@@ -65,11 +66,12 @@ export default function Committees() {
           <CommitteeSection title="Track chairs" members={trackChairs} columns={2} />
 
           <CommitteeSection title="Finance chairs" members={financeChairs} columns={2} />
-          <CommitteeSection title="Registration & kit distribution chairs" members={registrationChairs} columns={2} />
+          <CommitteeSection title="Registration & kit distribution chair" members={registrationChairs} columns={2} />
+          <CommitteeSection title="Registration & kit distribution co-chairs" members={registrationCoChairs} columns={2} />
           <CommitteeSection title="Publicity chairs" members={publicityChairs} columns={2} />
           <CommitteeSection title="Publication chairs" members={publicationChairs} columns={2} />
           <CommitteeSection title="Local arrangement chairs" members={localArrangementChairs} columns={2} />
-          <CommitteeSection title="Web and IT support co-chairs" members={webAndITCoChairs} columns={2} />
+          <CommitteeSection title="Web and IT support chairs" members={webAndITChairs} columns={2} />
         </div>
       </div>
     </div>
