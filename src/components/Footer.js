@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src="/images/ConferenceLogo.png" alt="CIDSBA 2027 logo" className="h-12 w-auto max-w-[220px] object-contain" />
+              <img src="/images/ConferenceLogo.png" alt="CIDSBA 2028 logo" className="h-12 w-auto max-w-[220px] object-contain" />
             </div>
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-300">
               International Conference on Computational Intelligence, Data Science and Business Applications, hosted by Daffodil International University.

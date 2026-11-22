@@ -9,7 +9,7 @@ export default function Speakers() {
           <span className="section-label">Featured speakers</span>
           <h1 className="section-heading">Meet our distinguished speakers</h1>
           <p className="section-copy mx-auto">
-            CIDSBA 2027 brings together influential researchers, academics, and industry leaders to share ideas shaping the future of intelligence and data-driven innovation.
+            CIDSBA 2028 brings together influential researchers, academics, and industry leaders to share ideas shaping the future of intelligence and data-driven innovation.
           </p>
         </div>
 

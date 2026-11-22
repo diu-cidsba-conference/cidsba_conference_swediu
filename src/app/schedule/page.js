@@ -21,7 +21,7 @@ export default function Schedule() {
             </div>
             <div>
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Date</div>
-              <div className="mt-2 text-xl font-black text-slate-900">February 2027</div>
+              <div className="mt-2 text-xl font-black text-slate-900">28-29 January 2028</div>
             </div>
           </div>
           <div className="soft-card flex items-center gap-4">

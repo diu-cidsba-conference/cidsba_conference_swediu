@@ -31,7 +31,7 @@ export default function PresentationGuidelines() {
           <h1 className="section-heading">Presentation guidelines</h1>
           <p className="section-copy mx-auto">
             Placeholder page — this content is a draft and will be replaced with the final presentation
-            guidelines for CIDSBA 2027.
+            guidelines for CIDSBA 2028.
           </p>
         </div>
 

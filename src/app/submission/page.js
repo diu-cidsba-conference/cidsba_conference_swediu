@@ -13,11 +13,11 @@ export default function Submission() {
 
   const importantDates = [
     { event: 'Announcement Date', date: 'June 2026' },
-    { event: 'Paper Submission Deadline', date: 'October 2026' },
-    { event: 'Acceptance Notification', date: 'December 2026' },
-    { event: 'Camera-Ready Submission', date: 'January 2027' },
-    { event: 'Early Bird Registration', date: 'January 2027' },
-    { event: 'Conference Dates', date: 'February 2027' },
+    { event: 'Paper Submission Deadline', date: '10 August 2027' },
+    { event: 'Acceptance Notification', date: '2 September 2027' },
+    { event: 'Early Bird Registration', date: '20 September 2027' },
+    { event: 'Registration Deadline', date: '18 November 2027' },
+    { event: 'Conference Dates', date: '28-29 January 2028' },
   ];
 
   return (
@@ -25,7 +25,7 @@ export default function Submission() {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <span className="section-label">Call for papers</span>
-          <h1 className="section-heading">Submit your research to CIDSBA 2027</h1>
+          <h1 className="section-heading">Submit your research to CIDSBA 2028</h1>
           <p className="section-copy mx-auto">
             Share your original work in computational intelligence, data science, and business applications with a global network of scholars and practitioners.
           </p>

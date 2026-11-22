@@ -81,11 +81,11 @@ export default function Home() {
   ];
 
   const dates = [
-    { label: 'Paper Submission Deadline', value: 'October 2026', accent: 'bg-sky-100 text-sky-700' },
-    { label: 'Acceptance Notification', value: 'December 2026', accent: 'bg-amber-100 text-amber-700' },
-    { label: 'Final Camera-Ready Submission', value: 'January 2027', accent: 'bg-emerald-100 text-emerald-700' },
-    { label: 'Registration Deadline', value: 'January 2027', accent: 'bg-rose-100 text-rose-700' },
-    { label: 'Conference Dates', value: '20-21 February 2027', accent: 'bg-violet-100 text-violet-700' },
+    { label: 'Paper Submission Deadline', value: '10 August 2027', accent: 'bg-sky-100 text-sky-700' },
+    { label: 'Acceptance Notification', value: '2 September 2027', accent: 'bg-amber-100 text-amber-700' },
+    { label: 'Early Bird Registration', value: '20 September 2027', accent: 'bg-emerald-100 text-emerald-700' },
+    { label: 'Registration Deadline', value: '18 November 2027', accent: 'bg-rose-100 text-rose-700' },
+    { label: 'Conference Dates', value: '28-29 January 2028', accent: 'bg-violet-100 text-violet-700' },
   ];
 
   const reasons = [
@@ -112,7 +112,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CountdownTimer targetDate={new Date('2027-02-20T00:00:00').toISOString()} title="Conference countdown" />
+      <CountdownTimer targetDate={new Date('2028-01-28T00:00:00').toISOString()} title="Conference countdown" />
 
       <section className="section bg-[#fffdf8]">
         <div className="container">
@@ -120,7 +120,7 @@ export default function Home() {
             <span className="section-label">Why attend</span>
             <h2 className="section-heading">A flagship platform for intelligent innovation</h2>
             <p className="section-copy mx-auto">
-              CIDSBA 2027 brings together technology leaders, academics, and emerging researchers to discuss how computational intelligence and data science are redefining modern business and society.
+              CIDSBA 2028 brings together technology leaders, academics, and emerging researchers to discuss how computational intelligence and data science are redefining modern business and society.
             </p>
           </div>
 
@@ -308,7 +308,7 @@ export default function Home() {
               <span className="section-label">Conference leadership</span>
               <h2 className="section-heading">Messages that set the direction</h2>
             </div>
-            <p className="section-copy mt-0">Hear from the people shaping CIDSBA 2027, its research community, and the conversations we hope to carry forward.</p>
+            <p className="section-copy mt-0">Hear from the people shaping CIDSBA 2028, its research community, and the conversations we hope to carry forward.</p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {['Chief Guest', 'Chief Patron & Patrons', 'Conference Chairs'].map((title) => (
@@ -365,7 +365,7 @@ export default function Home() {
               },
               {
                 name: 'Daffodil Smart City',
-                detail: 'The green, connected campus hosting CIDSBA 2027.',
+                detail: 'The green, connected campus hosting CIDSBA 2028.',
                 image: 'https://daffodilvarsity.edu.bd/images/hero.jpg',
               },
             ].map((place) => (

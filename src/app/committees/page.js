@@ -29,7 +29,7 @@ export default function Committees() {
           <span className="section-label">Leadership</span>
           <h1 className="section-heading">Conference committees</h1>
           <p className="section-copy mx-auto">
-            Meet the distinguished team steering CIDSBA 2027 through academic excellence, technical rigor, and organizing leadership.
+            Meet the distinguished team steering CIDSBA 2028 through academic excellence, technical rigor, and organizing leadership.
           </p>
         </div>
 

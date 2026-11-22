@@ -40,7 +40,7 @@ export default function Registration() {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <span className="section-label">Registration</span>
-          <h1 className="section-heading">Reserve your place at CIDSBA 2027</h1>
+          <h1 className="section-heading">Reserve your place at CIDSBA 2028</h1>
           <p className="section-copy mx-auto">
             Choose the registration option that suits your role and join a distinguished community of researchers, professionals, and students.
           </p>

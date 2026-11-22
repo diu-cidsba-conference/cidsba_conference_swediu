@@ -32,7 +32,7 @@ export default function CameraReady() {
           <h1 className="section-heading">Camera-ready submission</h1>
           <p className="section-copy mx-auto">
             Placeholder page — this content is a draft and will be replaced with the final camera-ready
-            submission instructions for CIDSBA 2027.
+            submission instructions for CIDSBA 2028.
           </p>
         </div>
 

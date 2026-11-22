@@ -87,7 +87,7 @@ export default function Header() {
       <nav className="container">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex min-w-0 items-center gap-3">
-            <img src="/images/ConferenceLogo.png" alt="CIDSBA 2027 conference logo" className="h-12 w-auto max-w-[240px] object-contain md:h-14" />
+            <img src="/images/ConferenceLogo.png" alt="CIDSBA 2028 conference logo" className="h-12 w-auto max-w-[240px] object-contain md:h-14" />
           </Link>
 
           <div className="hidden items-center gap-1 xl:flex">

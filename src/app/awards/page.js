@@ -46,7 +46,7 @@ export default function Awards() {
           <span className="section-label">Recognition</span>
           <h1 className="section-heading">Conference awards</h1>
           <p className="section-copy mx-auto">
-            Placeholder page — this content will be replaced with the final awards information for CIDSBA 2027.
+            Placeholder page — this content will be replaced with the final awards information for CIDSBA 2028.
           </p>
         </div>
 

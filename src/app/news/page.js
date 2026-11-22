@@ -10,7 +10,7 @@ export default function News() {
           <span className="section-label">News</span>
           <h1 className="section-heading">Latest updates and announcements</h1>
           <p className="section-copy mx-auto">
-            Stay informed about key milestones, deadlines, program updates, and conference news from CIDSBA 2027.
+            Stay informed about key milestones, deadlines, program updates, and conference news from CIDSBA 2028.
           </p>
         </div>
 

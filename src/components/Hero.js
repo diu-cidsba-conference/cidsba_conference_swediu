@@ -10,7 +10,7 @@ export default function Hero() {
           <div>
             <div className="mb-6 flex flex-wrap items-center gap-3 text-sm font-bold text-[#8d4f35]">
               <span className="rounded-full border border-[#d9c9b3] bg-[#fffdf8] px-3 py-1.5">IEEE Conference</span>
-              <span className="rounded-full border border-[#d9c9b3] bg-[#f3e4c9] px-3 py-1.5">20-21 February 2027</span>
+              <span className="rounded-full border border-[#d9c9b3] bg-[#f3e4c9] px-3 py-1.5">28-29 January 2028</span>
             </div>
 
             <h1 className="max-w-4xl text-4xl font-black tracking-tight text-[#26352f] md:text-5xl lg:text-6xl">
@@ -40,7 +40,7 @@ export default function Hero() {
                   <FaCalendarAlt />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em]">Date</span>
                 </div>
-                <p className="text-lg font-bold text-[#26352f]">February 2027</p>
+                <p className="text-lg font-bold text-[#26352f]">January 2028</p>
               </div>
               <div className="rounded-2xl border border-[#e7ddce] bg-[#fffdf8] p-4 shadow-sm">
                 <div className="mb-3 flex items-center gap-3 text-[#a85c3b]">
@@ -74,7 +74,7 @@ export default function Hero() {
                 </div>
 
                 <div className="overflow-hidden rounded-[1.5rem] border border-[#e7ddce] bg-[#fffdf8] p-2">
-                  <img src="/images/ConferenceLogo.png" alt="CIDSBA 2027 conference logo" className="mx-auto w-full max-w-[560px] object-contain" />
+                  <img src="/images/ConferenceLogo.png" alt="CIDSBA 2028 conference logo" className="mx-auto w-full max-w-[560px] object-contain" />
                 </div>
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
