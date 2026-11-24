@@ -128,9 +128,9 @@ export default function Registration() {
             Be part of a highly engaging conference experience featuring keynote lectures, research discussion, and international collaboration.
           </p>
           <div className="mt-8 flex justify-center">
-            <button className="gold-button">
-              Complete Registration <FaArrowRight className="ml-2" />
-            </button>
+            <a href="mailto:cidsba@diu.edu.bd?subject=CIDSSE%202028%20registration" className="gold-button">
+              Ask about registration <FaArrowRight className="ml-2" aria-hidden />
+            </a>
           </div>
         </div>
       </div>

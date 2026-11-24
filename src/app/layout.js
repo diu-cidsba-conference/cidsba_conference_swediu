@@ -7,16 +7,18 @@ const inter = Inter({ subsets: ['latin'] });
 const serif = Source_Serif_4({ subsets: ['latin'], variable: '--font-serif' });
 
 export const metadata = {
-  title: 'IEEE CIDSSE 2028 - Daffodil International University',
-  description: 'IEEE International Conference on Computational Intelligence, Data Science and Software Engineering',
+  title: { default: 'CIDSSE 2028 | IEEE Conference, Dhaka', template: '%s | CIDSSE 2028' },
+  description: 'International Conference on Computational Intelligence, Data Science and Software Engineering, 28–29 January 2028, Daffodil International University, Dhaka.',
+  openGraph: { title: 'CIDSSE 2028', description: '28–29 January 2028 · Daffodil Smart City, Dhaka' },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${serif.variable}`}>
+        <a href="#main" className="skip-link">Skip to content</a>
         <Header />
-        <main className="min-h-screen">
+        <main id="main" className="min-h-screen">
           {children}
         </main>
         <Footer />

@@ -1,74 +1,38 @@
-import TimelineItem from '@/components/TimelineItem';
-import { scheduleDay1, scheduleDay2 } from '@/data/schedule';
-import { FaCalendarAlt, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
+import PageHeader from '@/components/PageHeader';
+import DatesTimeline from '@/components/DatesTimeline';
+import Link from 'next/link';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { conference } from '@/data/site';
+
+export const metadata = { title: 'Important dates & schedule' };
 
 export default function Schedule() {
   return (
-    <div className="section bg-slate-50">
-      <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Program</span>
-          <h1 className="section-heading">Conference schedule</h1>
-          <p className="section-copy mx-auto">
-            A two-day program designed to bring together keynote insights, technical sessions, networking, and collaborative exchange.
-          </p>
-        </div>
+    <>
+      <PageHeader label="Program" title="Important dates & schedule">
+        Submission and registration milestones leading to the conference.
+      </PageHeader>
+      <div className="container section space-y-14">
+        <section aria-labelledby="dates-h">
+          <h2 id="dates-h" className="mb-6 text-2xl font-semibold">Key dates</h2>
+          <DatesTimeline />
+        </section>
 
-        <div className="mx-auto mt-12 max-w-5xl grid gap-6 md:grid-cols-2">
-          <div className="soft-card flex items-center gap-4">
-            <div className="feature-icon h-12 w-12 bg-sky-100 text-sky-700">
-              <FaCalendarAlt />
-            </div>
-            <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">Date</div>
-              <div className="mt-2 text-xl font-semibold text-slate-900">28-29 January 2028</div>
-            </div>
+        <section aria-labelledby="prog-h">
+          <h2 id="prog-h" className="text-2xl font-semibold">Conference programme</h2>
+          <dl className="mt-6 grid gap-px border border-[#e2e5ec] bg-[#e2e5ec] md:grid-cols-2">
+            <div className="flex items-start gap-3 bg-white p-5"><FaCalendarAlt className="mt-1 text-[#1a5aa6]" aria-hidden /><div><dt className="font-mono text-xs uppercase tracking-wider text-slate-600">Dates</dt><dd className="mt-1 font-semibold">{conference.datesLabel}</dd></div></div>
+            <div className="flex items-start gap-3 bg-white p-5"><FaMapMarkerAlt className="mt-1 text-[#1a5aa6]" aria-hidden /><div><dt className="font-mono text-xs uppercase tracking-wider text-slate-600">Venue</dt><dd className="mt-1 font-semibold">{conference.venue}</dd></div></div>
+          </dl>
+          <div className="empty-state mt-6">
+            <h3 className="text-xl font-semibold">Session-by-session programme to be announced</h3>
+            <p className="mx-auto mt-3 max-w-xl leading-7 text-slate-600">
+              The detailed programme will be published after paper acceptance. Keynote speakers are already confirmed.
+            </p>
+            <Link href="/speakers" className="secondary-button mt-6">View keynote speakers</Link>
           </div>
-          <div className="soft-card flex items-center gap-4">
-            <div className="feature-icon h-12 w-12 bg-amber-100 text-amber-700">
-              <FaMapMarkerAlt />
-            </div>
-            <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">Venue</div>
-              <div className="mt-2 text-xl font-semibold text-slate-900">Daffodil International University, Dhaka</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-5xl">
-          <div className="mb-6 rounded-lg bg-[#0b1f4d] p-6 text-white">
-            <h2 className="text-2xl font-semibold md:text-3xl">Day 1 — Research and keynote sessions</h2>
-            <p className="mt-2 text-slate-200">Opening keynote, invited talks, and structured technical paper sessions.</p>
-          </div>
-          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-none">
-            {scheduleDay1.map((item, index) => (
-              <TimelineItem key={index} {...item} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-5xl">
-          <div className="mb-6 rounded-lg bg-[#0b1f4d] p-6 text-white">
-            <h2 className="text-2xl font-semibold md:text-3xl">Day 2 — Industry and innovation forum</h2>
-            <p className="mt-2 text-slate-200">Panel discussions, applications, and closing ceremony.</p>
-          </div>
-          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-none">
-            {scheduleDay2.map((item, index) => (
-              <TimelineItem key={index} {...item} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-4xl rounded-lg bg-white p-8 text-center shadow-none md:p-10">
-          <h3 className="text-2xl font-semibold text-slate-900 md:text-3xl">Download the full schedule</h3>
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            Access the complete conference agenda in PDF format for planning your participation.
-          </p>
-          <button className="gold-button mt-8">
-            <FaDownload className="mr-2" /> Download PDF Schedule
-          </button>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 }

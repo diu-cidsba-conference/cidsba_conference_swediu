@@ -1,37 +1,22 @@
-import { FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { FaGlobe, FaMicrophone } from 'react-icons/fa';
 
-export default function SpeakerCard({ name, title, institution, bio, image, linkedin, email, website }) {
+export default function SpeakerCard({ name, institution, country, image, index, priority }) {
   return (
-    <article className="flex items-start gap-5 rounded-lg border border-[#e2e5ec] bg-white p-6">
-      {image ? (
-        <img src={image} alt={name} className="h-24 w-24 shrink-0 rounded-full object-cover object-top" />
-      ) : (
-        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#eaf1fb] text-2xl font-semibold text-[#1a5aa6]">
-          {name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-        </div>
-      )}
-      <div>
-        <h3 className="text-xl font-semibold text-[#0b1f4d]">{name}</h3>
-        <p className="mt-1 font-mono text-xs uppercase tracking-wider text-[#1a5aa6]">{title}</p>
-        <p className="mt-2 text-sm leading-6 text-slate-600">{institution}</p>
-        <p className="mt-2 text-sm leading-6 text-slate-600">{bio}</p>
-        <div className="mt-5 flex items-center gap-3">
-          {linkedin && (
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="rounded-full bg-slate-100 p-2 text-slate-700 transition hover:bg-sky-100 hover:text-sky-700">
-              <FaLinkedin size={16} />
-            </a>
-          )}
-          {email && (
-            <a href={`mailto:${email}`} className="rounded-full bg-slate-100 p-2 text-slate-700 transition hover:bg-sky-100 hover:text-sky-700">
-              <FaEnvelope size={16} />
-            </a>
-          )}
-          {website && (
-            <a href={website} target="_blank" rel="noopener noreferrer" className="rounded-full bg-slate-100 p-2 text-slate-700 transition hover:bg-sky-100 hover:text-sky-700">
-              <FaGlobe size={16} />
-            </a>
-          )}
-        </div>
+    <article className="group flex h-full flex-col border border-[#e2e5ec] bg-white transition-shadow hover:shadow-lg focus-within:shadow-lg">
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#eaf1fb]">
+        <img src={image} alt={`Portrait of ${name}`} loading={priority ? 'eager' : 'lazy'}
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+        <span className="absolute left-0 top-0 flex items-center gap-1.5 bg-[#f5b800] px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider text-slate-900">
+          <FaMicrophone aria-hidden /> Keynote{index != null && ` ${String(index + 1).padStart(2, '0')}`}
+        </span>
+        <span className="absolute bottom-0 right-0 flex items-center gap-1.5 bg-[#0b1f4d] px-3 py-1.5 text-xs font-medium text-white">
+          <FaGlobe className="text-[#f5c542]" aria-hidden /> {country}
+        </span>
+      </div>
+      <div className="flex flex-1 flex-col border-t-4 border-[#0b1f4d] p-5">
+        <h3 className="text-xl font-semibold leading-snug text-[#0b1f4d]">{name}</h3>
+        <p className="mt-2 text-sm leading-6 text-slate-700">{institution}</p>
+        <p className="mt-auto border-t border-[#e2e5ec] pt-4 text-xs text-slate-600">Talk title &amp; abstract to be announced</p>
       </div>
     </article>
   );

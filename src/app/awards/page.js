@@ -91,7 +91,7 @@ export default function Awards() {
           <div className="rounded-lg bg-[#0b1f4d] p-8 text-center text-white shadow-none md:p-10">
             <h2 className="text-2xl font-semibold md:text-3xl">Award details coming soon</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
-              Placeholder text — full nomination and selection process will be announced closer to the conference dates.
+              The nomination and selection process will be announced closer to the conference.
             </p>
           </div>
         </div>
