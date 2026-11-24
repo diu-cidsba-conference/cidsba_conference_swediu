@@ -5,80 +5,45 @@
 :root {
   --navy: #0b1f4d;
   --navy-soft: #14306e;
-  --blue: #1a6fb8;
-  --teal: #1a6fb8;
+  --blue: #1a5aa6;
   --mint: #eaf1fb;
   --gold: #f5b800;
-  --gold-soft: #fff4cc;
-  --paper: #ffffff;
-  --card: #ffffff;
-  --text: #0b1f4d;
-  --muted: #6b7280;
-  --shadow: rgba(38, 53, 47, 0.12);
+  --line: #e2e5ec;
+  --surface: #f4f6fa;
+  --muted: #4b5563; /* 7.5:1 on white */
 }
 
-html {
-  scroll-behavior: smooth;
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-h1, h2, h3 {
-  font-family: var(--font-serif), Georgia, serif;
-}
+h1, h2, h3 { font-family: var(--font-serif), Georgia, serif; }
+body { @apply antialiased; background: #fff; color: var(--navy); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
 
-body {
-  @apply text-slate-800 antialiased;
-  background-color: var(--paper);
-  color: var(--text);
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+.on-dark :focus-visible, .bg-navy :focus-visible { outline-color: #fff; }
 
 @layer components {
-.container {
-  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
-}
+  .container { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section { @apply py-14 md:py-20; }
+  .section-label { @apply inline-block font-mono text-xs font-medium uppercase tracking-wider text-[#1a5aa6]; }
+  .section-heading { @apply mt-3 break-words text-3xl font-semibold tracking-tight text-[#0b1f4d] md:text-4xl; }
+  .section-copy { @apply mt-4 max-w-3xl text-base leading-8 text-slate-600 md:text-lg; }
+  .soft-card { @apply rounded-lg border border-[#e2e5ec] bg-white p-6; }
+  .feature-icon { @apply flex h-14 w-14 items-center justify-center rounded-lg bg-[#eaf1fb] text-xl text-[#1a5aa6]; }
 
-.section {
-  @apply py-14 md:py-20;
-}
+  .btn-base { @apply inline-flex min-h-[44px] items-center justify-center rounded-md px-6 py-3 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50; }
+  .primary-button { @apply btn-base bg-[#0b1f4d] text-white hover:bg-[#14306e] active:bg-[#0b1f4d]; }
+  .secondary-button { @apply btn-base border border-[#0b1f4d] bg-white text-[#0b1f4d] hover:bg-slate-100; }
+  .gold-button { @apply btn-base bg-[#f5b800] font-bold text-slate-900 hover:bg-[#ffd24d] active:bg-[#e0a800]; }
+  .ghost-light-button { @apply btn-base border border-white/60 text-white hover:bg-white/10; }
 
-.section-shell {
-  @apply rounded-lg border border-[#e2e5ec] bg-[#ffffff] shadow-none;
+  /* Shared inner-page header band */
+  .page-hero { @apply border-b border-[#e2e5ec] bg-[#f4f6fa]; }
+  .empty-state { @apply rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center md:p-12; }
 }
-
-.section-label {
-  @apply inline-block font-mono text-xs font-medium uppercase tracking-wider text-[#1a5aa6];
-}
-
-.section-heading {
-  @apply mt-4 break-words text-3xl font-semibold tracking-tight text-[#0b1f4d] md:text-4xl;
-}
-
-.section-copy {
-  @apply mt-4 max-w-3xl text-base leading-8 text-slate-600 md:text-lg;
-}
-
-.soft-card {
-  @apply rounded-lg border border-[#e2e5ec] bg-[#ffffff] p-6 shadow-none;
-}
-
-.primary-button {
-  @apply inline-flex items-center justify-center rounded-md bg-[var(--navy)] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-[var(--navy-soft)];
-}
-
-.secondary-button {
-  @apply inline-flex items-center justify-center rounded-md border border-[var(--navy)] bg-white px-6 py-3 text-sm font-semibold text-[var(--navy)] transition-all duration-200 hover:bg-slate-50;
-}
-
-.gold-button {
-  @apply inline-flex items-center justify-center rounded-md bg-[var(--gold)] px-6 py-3 text-sm font-bold text-slate-900 transition-all duration-200 hover:bg-[#ffd24d];
-}
-
-.feature-icon {
-  @apply flex h-14 w-14 items-center justify-center rounded-lg bg-[#eaf1fb] text-xl text-[var(--blue)];
-}
-}
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 100; background: var(--gold); color: #111; padding: .75rem 1rem; font-weight: 700; border-radius: 6px; }
+.skip-link:focus { top: 1rem; }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { milestones } from '@/data/site';
 import { FaFileAlt, FaCheckCircle, FaCalendarAlt, FaDownload, FaArrowRight } from 'react-icons/fa';
 
 export default function Submission() {
@@ -10,18 +11,11 @@ export default function Submission() {
     'All papers must be submitted via the official conference management platform.',
     'Each manuscript will undergo a double-blind peer review process.',
     'Accepted and presented papers will be submitted for inclusion in the IEEE Xplore Digital Library.',
-    'Plagiarism, including self-plagiarism, is not tolerated. All submissions are screened for similarity and must follow the IEEE publishing ethics policies.',
-    'Generative AI tools (e.g., ChatGPT) must not be listed as authors. Any substantive use of AI-generated text, figures, or code must be disclosed in the acknowledgments, and authors remain fully responsible for the content.',
+    'Plagiarism is not tolerated. Following IEEE, plagiarism is the use of the work of others without explicitly acknowledging the original author or source, and it is a serious breach of professional conduct. All submissions must comply with the IEEE publishing ethics policies.',
+    'AI-generated content (text, figures, images or code) must be disclosed in the acknowledgments section. Identify the AI system used, the sections that contain AI-generated content, and the level at which it was used. Use of AI only to edit or polish your own text is generally outside this policy; disclosure is then not required but recommended.',
   ];
 
-  const importantDates = [
-    { event: 'Announcement Date', date: 'June 2026' },
-    { event: 'Paper Submission Deadline', date: '10 August 2027' },
-    { event: 'Acceptance Notification', date: '2 September 2027' },
-    { event: 'Early Bird Registration', date: '20 September 2027' },
-    { event: 'Registration Deadline', date: '18 November 2027' },
-    { event: 'Conference Dates', date: '28-29 January 2028' },
-  ];
+  const importantDates = milestones.map((m) => ({ event: m.label, date: m.display }));
 
   return (
     <div className="section bg-slate-50">
@@ -34,7 +28,17 @@ export default function Submission() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-6xl space-y-8">
+        <aside aria-labelledby="ethics-h" className="mx-auto mt-10 max-w-6xl border-l-4 border-[#f5b800] bg-[#fff8dc] p-6">
+          <h2 id="ethics-h" className="font-sans text-lg font-semibold">IEEE publication &amp; ethics policy</h2>
+          <p className="mt-2 leading-7 text-slate-800">
+            Accepted and presented papers will be submitted for inclusion in the IEEE Xplore Digital Library. All papers must follow IEEE policies on
+            plagiarism and on the use of AI-generated content.{' '}
+            <a href="https://conferences.ieeeauthorcenter.ieee.org/author-ethics/guidelines-and-policies/submission-policies/" target="_blank" rel="noreferrer"
+              className="font-semibold text-[#1a5aa6] underline underline-offset-4">Read the IEEE submission policies</a>.
+          </p>
+        </aside>
+
+        <div className="mx-auto mt-10 max-w-6xl space-y-8">
           <div className="soft-card p-8 md:p-10">
             <div className="mb-6 flex items-center gap-3">
               <div className="feature-icon h-12 w-12 bg-sky-100 text-sky-700">
@@ -107,8 +111,8 @@ export default function Submission() {
               Join global researchers and innovators by submitting a high-quality paper that advances the frontiers of computational intelligence, data science, and software engineering.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <button className="gold-button">Submit Paper</button>
-              <button className="secondary-button border-white bg-white/10 text-white hover:bg-white/20">Download Template</button>
+              <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noreferrer" className="gold-button">IEEE paper templates</a>
+              <a href="mailto:cidsba@diu.edu.bd?subject=Paper%20submission" className="ghost-light-button">Ask about submission</a>
             </div>
           </div>
 
@@ -117,22 +121,7 @@ export default function Submission() {
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
               Please use the official IEEE manuscript template to ensure full compatibility with review and publication requirements.
             </p>
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <a href="#" className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
-                <div>
-                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">LaTeX</div>
-                  <div className="mt-2 text-lg font-bold text-slate-900">Download LaTeX template</div>
-                </div>
-                <FaDownload className="text-xl text-sky-700" />
-              </a>
-              <a href="#" className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
-                <div>
-                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">Word</div>
-                  <div className="mt-2 text-lg font-bold text-slate-900">Download Word template</div>
-                </div>
-                <FaArrowRight className="text-xl text-sky-700" />
-              </a>
-            </div>
+            <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noreferrer" className="secondary-button mt-6">IEEE templates (LaTeX &amp; Word)</a>
           </div>
         </div>
       </div>

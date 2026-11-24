@@ -65,22 +65,22 @@ export default function Contact() {
 
           <div className="soft-card p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Send a message</h2>
-            <form className="mt-8 space-y-5">
+            <form className="mt-8 space-y-5" action="mailto:cidsba@diu.edu.bd" method="post" encType="text/plain">
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm font-semibold text-slate-700">Name</label>
-                <input type="text" id="name" placeholder="Your name" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
+                <input type="text" id="name" name="Name" required placeholder="Your name" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
               </div>
               <div>
                 <label htmlFor="email" className="mb-2 block text-sm font-semibold text-slate-700">Email</label>
-                <input type="email" id="email" placeholder="your@email.com" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
+                <input type="email" id="email" name="Email" required placeholder="your@email.com" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
               </div>
               <div>
                 <label htmlFor="subject" className="mb-2 block text-sm font-semibold text-slate-700">Subject</label>
-                <input type="text" id="subject" placeholder="Message subject" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
+                <input type="text" id="subject" name="Subject" required placeholder="Message subject" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
               </div>
               <div>
                 <label htmlFor="message" className="mb-2 block text-sm font-semibold text-slate-700">Message</label>
-                <textarea id="message" rows="4" placeholder="Tell us how we can help" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white"></textarea>
+                <textarea id="message" name="Message" required rows="4" placeholder="Tell us how we can help" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white"></textarea>
               </div>
               <button type="submit" className="primary-button w-full justify-center">
                 <FaPaperPlane className="mr-2" /> Send Message

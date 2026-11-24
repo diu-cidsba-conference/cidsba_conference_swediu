@@ -1,180 +1,124 @@
 'use client';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+const navigation = [
+  { name: 'Program', href: '/schedule', dropdown: [
+    { name: 'Important dates & schedule', href: '/schedule' },
+    { name: 'Tracks', href: '/#tracks' },
+    { name: 'Presentation guidelines', href: '/presentation-guidelines' },
+  ] },
+  { name: 'Speakers', href: '/speakers' },
+  { name: 'Authors', href: '/submission', dropdown: [
+    { name: 'Call for papers', href: '/submission' },
+    { name: 'Camera-ready guidelines', href: '/camera-ready' },
+    { name: 'Templates & downloads', href: '/downloads' },
+    { name: 'Awards', href: '/awards' },
+  ] },
+  { name: 'Registration', href: '/registration' },
+  { name: 'Committees', href: '/committees' },
+  { name: 'Sponsors', href: '/sponsors' },
+  { name: 'Venue & travel', href: '/contact#travel' },
+  { name: 'News', href: '/news' },
+];
 
+export default function Header() {
+  const [open, setOpen] = useState(false);
+  const [sub, setSub] = useState(null);
+  const pathname = usePathname();
+  const ref = useRef(null);
+
+  useEffect(() => { setOpen(false); setSub(null); }, [pathname]);
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onKey = (e) => e.key === 'Escape' && (setOpen(false), setSub(null));
+    const onClick = (e) => ref.current && !ref.current.contains(e.target) && setSub(null);
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('click', onClick);
+    return () => { document.removeEventListener('keydown', onKey); document.removeEventListener('click', onClick); };
   }, []);
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    {
-      name: 'Committee',
-      href: '/committees',
-      dropdown: [
-        { name: 'Chief Patron & Patron', href: '/committees#patrons' },
-        { name: 'International Advisory Committee', href: '/committees#international-advisory' },
-        { name: 'National Advisory Committee', href: '/committees#national-advisory' },
-        { name: 'Conference Chairs & Co-Chairs', href: '/committees#chairs' },
-        { name: 'Organizing Committee', href: '/committees#organizing' },
-        { name: 'Technical Program Committee', href: '/committees#tpc' },
-        { name: 'Track Chairs & Co-Chairs', href: '/committees#track-chairs' },
-        { name: 'Others Committee', href: '/committees#others' },
-      ],
-    },
-    {
-      name: 'Messages',
-      href: '/#messages',
-      dropdown: [
-        { name: 'Chief Guest: Opening & Closing', href: '/#messages' },
-        { name: 'Chief Patron & Patrons', href: '/#messages' },
-        { name: 'General, Organizing & TPC Chairs', href: '/#messages' },
-      ],
-    },
-    {
-      name: 'Speakers',
-      href: '/speakers',
-    },
-    {
-      name: 'Authors',
-      href: '/submission',
-      dropdown: [
-        { name: 'Paper Submission & Guidelines', href: '/submission' },
-        { name: 'Conference Flyer / CFP', href: '/downloads' },
-        { name: 'Tracks', href: '/#tracks' },
-        { name: 'Important Dates', href: '/schedule' },
-        { name: 'Program Schedule', href: '/schedule' },
-        { name: 'Registration Info & Costs', href: '/registration' },
-        { name: 'Camera-Ready Guidelines', href: '/camera-ready' },
-        { name: 'Presentation Guidelines', href: '/presentation-guidelines' },
-        { name: 'Conference Template', href: '/downloads' },
-        { name: 'Accommodation & Transportation', href: '/contact#travel' },
-      ],
-    },
-    {
-      name: 'Events',
-      href: '/#events',
-      dropdown: [
-        { name: 'Workshop', href: '/#events' },
-        { name: 'Add Your Event', href: '/contact#events' },
-      ],
-    },
-    { name: 'Awards', href: '/awards' },
-    { name: 'Local Attraction', href: '/#local-attraction' },
-    { name: 'Contact', href: '/contact' },
-  ];
+  const active = (href) => pathname === href.split('#')[0] && href !== '/';
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-[#e2e5ec] bg-[#ffffff]/95 shadow-lg backdrop-blur-xl' : 'bg-[#ffffff]/90 shadow-sm backdrop-blur-xl'
-      }`}
-    >
-      <nav className="container">
-        <div className="flex h-20 items-center justify-between gap-4">
-          <Link href="/" className="flex min-w-0 items-center gap-3">
-            <img src="/images/ConferenceLogo.png" alt="CIDSSE 2028 conference logo" className="h-14 w-auto object-contain md:h-16" />
+    <header ref={ref} className="sticky top-0 z-50 border-b border-[#e2e5ec] bg-white">
+      <nav aria-label="Main" className="container">
+        <div className="flex h-[72px] items-center justify-between gap-4">
+          <Link href="/" className="flex shrink-0 items-center" aria-label="CIDSSE 2028 home">
+            <img src="/images/ConferenceLogo.png" alt="CIDSSE 2028" className="h-12 w-auto md:h-14" />
           </Link>
 
-          <div className="hidden items-center gap-1 xl:flex">
+          <ul className="hidden items-center gap-0.5 lg:flex">
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <li key={item.name} className="relative">
                 {item.dropdown ? (
                   <>
-                    <button className="flex items-center whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]">
-                      {item.name}
-                      <FaChevronDown className="ml-1 text-[10px]" />
+                    <button type="button" aria-expanded={sub === item.name} aria-haspopup="true"
+                      onClick={() => setSub(sub === item.name ? null : item.name)}
+                      className="flex min-h-[44px] items-center gap-1 whitespace-nowrap rounded px-2.5 text-sm font-medium text-slate-800 hover:bg-slate-100">
+                      {item.name} <FaChevronDown className={`text-[10px] transition ${sub === item.name ? 'rotate-180' : ''}`} aria-hidden />
                     </button>
-                    <div className="invisible absolute left-0 top-full mt-2 w-52 rounded-lg border border-slate-200 bg-white p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block rounded-md px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="hidden items-center gap-3 xl:flex">
-            <img src="/images/diu-logo.png" alt="DIU logo" className="h-10 w-auto object-contain" />
-            <Link href="/submission" className="gold-button whitespace-nowrap">
-              Submit Paper
-            </Link>
-          </div>
-
-          <div className="xl:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-100"
-            >
-              {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-            </button>
-          </div>
-        </div>
-
-        {isOpen && (
-          <div className="border-t border-[#e2e5ec] pb-4 pt-3 xl:hidden">
-            {navigation.map((item) => (
-              <div key={item.name}>
-                {item.dropdown ? (
-                  <>
-                    <button
-                      onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                      className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-medium text-slate-700 transition hover:bg-slate-100"
-                    >
-                      {item.name}
-                      <FaChevronDown className={`text-[10px] transition ${openDropdown === item.name ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openDropdown === item.name && (
-                      <div className="px-3 pb-2">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block rounded-md px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-[var(--navy)]"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {subItem.name}
-                          </Link>
+                    {sub === item.name && (
+                      <ul className="absolute left-0 top-full z-10 mt-1 w-64 border border-[#e2e5ec] bg-white p-1.5 shadow-lg">
+                        {item.dropdown.map((s) => (
+                          <li key={s.name}><Link href={s.href} className="block rounded px-3 py-2.5 text-sm text-slate-800 hover:bg-slate-100">{s.name}</Link></li>
                         ))}
-                      </div>
+                      </ul>
                     )}
                   </>
                 ) : (
-                  <Link
-                    href={item.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-slate-700 transition hover:bg-slate-100"
-                    onClick={() => setIsOpen(false)}
-                  >
+                  <Link href={item.href} aria-current={active(item.href) ? 'page' : undefined}
+                    className={`flex min-h-[44px] items-center whitespace-nowrap rounded px-2.5 text-sm font-medium hover:bg-slate-100 ${active(item.href) ? 'text-[#1a5aa6] underline decoration-[#f5b800] decoration-2 underline-offset-8' : 'text-slate-800'}`}>
                     {item.name}
                   </Link>
                 )}
-              </div>
+              </li>
             ))}
+          </ul>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <Link href="/registration" className="secondary-button !px-4">Register</Link>
+            <Link href="/submission" className="gold-button !px-4 whitespace-nowrap">Submit paper</Link>
+          </div>
+
+          <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-nav"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            className="flex h-11 w-11 items-center justify-center rounded border border-slate-300 text-slate-800 hover:bg-slate-100 lg:hidden">
+            {open ? <FaTimes size={18} aria-hidden /> : <FaBars size={18} aria-hidden />}
+          </button>
+        </div>
+
+        {open && (
+          <div id="mobile-nav" className="max-h-[calc(100vh-72px)] overflow-y-auto border-t border-[#e2e5ec] pb-5 pt-2 lg:hidden">
+            <ul>
+              {navigation.map((item) => (
+                <li key={item.name} className="border-b border-[#eef0f4]">
+                  {item.dropdown ? (
+                    <>
+                      <button type="button" aria-expanded={sub === item.name}
+                        onClick={() => setSub(sub === item.name ? null : item.name)}
+                        className="flex min-h-[48px] w-full items-center justify-between px-1 text-left text-base font-medium text-slate-900">
+                        {item.name} <FaChevronDown className={`text-xs transition ${sub === item.name ? 'rotate-180' : ''}`} aria-hidden />
+                      </button>
+                      {sub === item.name && (
+                        <ul className="pb-2 pl-3">
+                          {item.dropdown.map((s) => (
+                            <li key={s.name}><Link href={s.href} className="block min-h-[44px] py-2.5 text-[15px] text-slate-700">{s.name}</Link></li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <Link href={item.href} className="flex min-h-[48px] items-center px-1 text-base font-medium text-slate-900">{item.name}</Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <Link href="/registration" className="secondary-button">Register</Link>
+              <Link href="/submission" className="gold-button">Submit paper</Link>
+            </div>
           </div>
         )}
       </nav>

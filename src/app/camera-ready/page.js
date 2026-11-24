@@ -9,8 +9,8 @@ export default function CameraReady() {
     'Correct all author names, affiliations, and email addresses.',
     'Submit the signed IEEE copyright transfer form.',
     'At least one author must complete registration before the deadline.',
-    'Confirm the final paper is free of plagiarism and complies with the IEEE publishing ethics policies.',
-    'Disclose any use of generative AI tools in the acknowledgments; AI tools cannot be credited as authors.',
+    'Confirm the final paper is free of plagiarism, i.e. all work and sources of others are explicitly acknowledged, in line with the IEEE publishing ethics policies.',
+    'Disclose any AI-generated content in the acknowledgments: name the AI system, identify the affected sections, and state the level of use. Double-check all AI-generated results.',
     'Papers presented at the conference will be submitted for inclusion in the IEEE Xplore Digital Library.',
   ];
 
@@ -39,7 +39,17 @@ export default function CameraReady() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-6xl space-y-8">
+        <aside aria-labelledby="ethics-h" className="mx-auto mt-10 max-w-6xl border-l-4 border-[#f5b800] bg-[#fff8dc] p-6">
+          <h2 id="ethics-h" className="font-sans text-lg font-semibold">IEEE publication &amp; ethics policy</h2>
+          <p className="mt-2 leading-7 text-slate-800">
+            Accepted and presented papers will be submitted for inclusion in the IEEE Xplore Digital Library. All papers must follow IEEE policies on
+            plagiarism and on the use of AI-generated content.{' '}
+            <a href="https://conferences.ieeeauthorcenter.ieee.org/author-ethics/guidelines-and-policies/submission-policies/" target="_blank" rel="noreferrer"
+              className="font-semibold text-[#1a5aa6] underline underline-offset-4">Read the IEEE submission policies</a>.
+          </p>
+        </aside>
+
+        <div className="mx-auto mt-10 max-w-6xl space-y-8">
           <div className="soft-card p-8 md:p-10">
             <div className="mb-6 flex items-center gap-3">
               <div className="feature-icon h-12 w-12 bg-[#eaf1fb] text-[#14306e]">
@@ -99,27 +109,20 @@ export default function CameraReady() {
               <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Copyright form</h2>
             </div>
             <p className="leading-7 text-slate-600">
-              Placeholder text — download, complete, and submit the IEEE copyright transfer form alongside your
-              final manuscript. Details and the actual form link will be added here.
+              The IEEE copyright transfer form is completed alongside your final manuscript. The form link will be shared with authors of accepted papers.
             </p>
-            <a href="#" className="mt-6 flex max-w-md items-center justify-between rounded-lg border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
-              <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">PDF</div>
-                <div className="mt-2 text-lg font-bold text-slate-900">Download copyright form</div>
-              </div>
-              <FaDownload className="text-xl text-sky-700" />
-            </a>
+            <p className="mt-6 font-mono text-xs uppercase tracking-wider text-slate-600">Form not yet available</p>
           </div>
 
           <div className="rounded-lg bg-[#0b1f4d] p-8 text-center text-white shadow-none md:p-10">
             <h2 className="text-2xl font-semibold md:text-3xl">Ready to submit your camera-ready paper?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
-              Placeholder call-to-action — link this to the actual camera-ready submission portal once available.
+              Camera-ready instructions and the submission link will be sent to authors of accepted papers. Questions? Contact the organizers.
             </p>
             <div className="mt-8 flex justify-center">
-              <button className="gold-button">
-                Submit Camera-Ready Paper <FaArrowRight className="ml-2" />
-              </button>
+              <a href="mailto:cidsba@diu.edu.bd?subject=Camera-ready%20paper" className="gold-button">
+                Contact the organizers <FaArrowRight className="ml-2" aria-hidden />
+              </a>
             </div>
           </div>
         </div>

@@ -1,43 +1,29 @@
-import NewsCard from '@/components/NewsCard';
-import { newsArticles } from '@/data/news';
-import { FaBell } from 'react-icons/fa';
+import PageHeader from '@/components/PageHeader';
+import { FaRegNewspaper, FaEnvelope } from 'react-icons/fa';
+import { conference } from '@/data/site';
+
+export const metadata = { title: 'News & announcements' };
 
 export default function News() {
   return (
-    <div className="section bg-slate-50">
-      <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="section-label">News</span>
-          <h1 className="section-heading">Latest updates and announcements</h1>
-          <p className="section-copy mx-auto">
-            Stay informed about key milestones, deadlines, program updates, and conference news from CIDSSE 2028.
+    <>
+      <PageHeader label="News" title="News & announcements">
+        Official updates on deadlines, speakers and the programme.
+      </PageHeader>
+      <div className="container section">
+        <div className="empty-state mx-auto max-w-3xl">
+          <FaRegNewspaper className="mx-auto text-4xl text-[#1a5aa6]" aria-hidden />
+          <h2 className="mt-5 text-2xl font-semibold">No announcements yet</h2>
+          <p className="mx-auto mt-3 max-w-xl leading-7 text-slate-600">
+            Articles will be published here once the organizing committee confirms them. In the meantime, the call for papers and
+            important dates are available on the submission page.
           </p>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-5xl rounded-lg bg-[#0b1f4d] p-8 text-center text-white shadow-none md:p-10">
-          <FaBell className="mx-auto mb-4 text-5xl text-amber-300" />
-          <h2 className="text-2xl font-semibold md:text-3xl">Subscribe to updates</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
-            Get timely announcements about submission deadlines, registration milestones, and conference highlights.
-          </p>
-          <div className="mx-auto mt-8 flex max-w-lg flex-col gap-3 sm:flex-row">
-            <input type="email" placeholder="Enter your email" className="w-full rounded-full border border-white/30 bg-white px-4 py-3 text-slate-800 outline-none placeholder:text-slate-400" />
-            <button className="gold-button whitespace-nowrap">Subscribe</button>
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="/submission" className="primary-button">Call for papers</a>
+            <a href={`mailto:${conference.email}`} className="secondary-button"><FaEnvelope className="mr-2" aria-hidden /> Email the organizers</a>
           </div>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-6xl">
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {newsArticles.map((article) => (
-              <NewsCard key={article.id} {...article} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-12 text-center">
-          <button className="secondary-button">Load more articles</button>
         </div>
       </div>
-    </div>
+    </>
   );
 }

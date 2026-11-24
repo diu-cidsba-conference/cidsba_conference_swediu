@@ -92,15 +92,9 @@ export default function PresentationGuidelines() {
               <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Presentation template</h2>
             </div>
             <p className="leading-7 text-slate-600">
-              Placeholder text — the official slide template will be linked here once finalized.
+              The official slide template has not been published yet.
             </p>
-            <a href="#" className="mt-6 flex max-w-md items-center justify-between rounded-lg border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
-              <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">PPTX</div>
-                <div className="mt-2 text-lg font-bold text-slate-900">Download slide template</div>
-              </div>
-              <FaDownload className="text-xl text-sky-700" />
-            </a>
+            <p className="mt-6 font-mono text-xs uppercase tracking-wider text-slate-600">Template not yet available</p>
           </div>
         </div>
       </div>

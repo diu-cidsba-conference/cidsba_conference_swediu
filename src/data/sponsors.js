@@ -17,7 +17,7 @@ export const goldSponsors = [
   {
     name: "Tech Corp International",
     logo: null,
-    website: "#",
+    website: null,
     description: "Technology Partner"
   }
 ];
@@ -26,17 +26,17 @@ export const silverSponsors = [
   {
     name: "Data Solutions Ltd",
     logo: null,
-    website: "#"
+    website: null
   },
   {
     name: "AI Innovations Inc",
     logo: null,
-    website: "#"
+    website: null
   },
   {
     name: "Cloud Systems Pro",
     logo: null,
-    website: "#"
+    website: null
   }
 ];
 
@@ -44,21 +44,21 @@ export const bronzeSponsors = [
   {
     name: "Academic Press",
     logo: null,
-    website: "#"
+    website: null
   },
   {
     name: "Research Publications",
     logo: null,
-    website: "#"
+    website: null
   },
   {
     name: "Tech Media Group",
     logo: null,
-    website: "#"
+    website: null
   },
   {
     name: "Digital Services Co",
     logo: null,
-    website: "#"
+    website: null
   }
 ];
