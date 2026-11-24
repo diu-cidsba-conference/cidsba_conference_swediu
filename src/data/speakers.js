@@ -7,7 +7,7 @@ export const keynoteSpeakers = [
     title: "Keynote Speaker",
     institution: "Xiamen University Malaysia, Malaysia",
     bio: "Talk details to be announced.",
-    image: null
+    image: "/images/speakers/mahdi-miraz.jpg"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const keynoteSpeakers = [
     title: "Keynote Speaker",
     institution: "Florida Gulf Coast University, USA",
     bio: "Talk details to be announced.",
-    image: null
+    image: "/images/speakers/baharul-islam.jpg"
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const keynoteSpeakers = [
     title: "Keynote Speaker",
     institution: "MMMI, University of Southern Denmark, Denmark",
     bio: "Talk details to be announced.",
-    image: null
+    image: "/images/speakers/miguel-campusano.png"
   },
   {
     id: 4,
@@ -31,6 +31,6 @@ export const keynoteSpeakers = [
     title: "Keynote Speaker",
     institution: "University of Evora, Portugal",
     bio: "Talk details to be announced.",
-    image: null
+    image: "/images/speakers/mouhaydine-tlemcani.jpg"
   }
 ];

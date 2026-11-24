@@ -1,4 +1,4 @@
-// All entries below are sourced from the official CIDSBA committee list PDF.
+// All entries below are sourced from the official CIDSSE committee list PDF.
 // The PDF is treated as ground truth for names, titles, and affiliations.
 // Empty { name: "", institution: "" } rows are placeholders for committees
 // where the PDF has not yet listed names — fill them in once confirmed.

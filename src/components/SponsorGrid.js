@@ -11,14 +11,14 @@ export default function SponsorGrid({ sponsors, tier }) {
       {sponsors.map((sponsor, index) => (
         <div
           key={index}
-          className={`${tierStyles[tier]} flex min-h-[160px] items-center justify-center rounded-[1.5rem] border border-slate-200 bg-white p-8 text-center shadow-[0_14px_30px_rgba(13,27,61,0.05)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(13,27,61,0.09)]`}
+          className={`${tierStyles[tier]} flex min-h-[160px] items-center justify-center rounded-lg border border-slate-200 bg-white p-8 text-center shadow-none transition hover:shadow-none`}
         >
           {sponsor.logo ? (
             <img src={sponsor.logo} alt={sponsor.name} className="max-h-32 max-w-full object-contain" />
           ) : (
             <div>
-              <div className="text-2xl font-black tracking-tight text-slate-700">{sponsor.name}</div>
-              {sponsor.description && <div className="mt-2 text-sm text-slate-500">{sponsor.description}</div>}
+              <div className="text-2xl font-semibold tracking-tight text-slate-700">{sponsor.name}</div>
+              {sponsor.description && <div className="mt-2 text-sm text-slate-600">{sponsor.description}</div>}
             </div>
           )}
         </div>

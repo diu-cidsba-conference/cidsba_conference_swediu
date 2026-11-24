@@ -3,22 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --navy: #26352f;
-  --navy-soft: #3c5147;
-  --blue: #a85c3b;
-  --teal: #687f68;
-  --mint: #e4eee2;
-  --gold: #c58a45;
-  --gold-soft: #f3e4c9;
-  --paper: #f8f3e9;
-  --card: #fffdf8;
-  --text: #26352f;
-  --muted: #6e746b;
+  --navy: #0b1f4d;
+  --navy-soft: #14306e;
+  --blue: #1a6fb8;
+  --teal: #1a6fb8;
+  --mint: #eaf1fb;
+  --gold: #f5b800;
+  --gold-soft: #fff4cc;
+  --paper: #ffffff;
+  --card: #ffffff;
+  --text: #0b1f4d;
+  --muted: #6b7280;
   --shadow: rgba(38, 53, 47, 0.12);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif), Georgia, serif;
 }
 
 body {
@@ -33,6 +37,7 @@ img {
   display: block;
 }
 
+@layer components {
 .container {
   @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
 }
@@ -42,15 +47,15 @@ img {
 }
 
 .section-shell {
-  @apply rounded-3xl border border-[#e7ddce] bg-[#fffdf8] shadow-[0_20px_60px_rgba(38,53,47,0.08)];
+  @apply rounded-lg border border-[#e2e5ec] bg-[#ffffff] shadow-none;
 }
 
 .section-label {
-  @apply inline-flex items-center rounded-full border border-[#d9c9b3] bg-[#f3e4c9] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#8d4f35];
+  @apply inline-block font-mono text-xs font-medium uppercase tracking-wider text-[#1a5aa6];
 }
 
 .section-heading {
-  @apply mt-4 break-words text-3xl font-black tracking-tight text-[#26352f] md:text-4xl;
+  @apply mt-4 break-words text-3xl font-semibold tracking-tight text-[#0b1f4d] md:text-4xl;
 }
 
 .section-copy {
@@ -58,22 +63,22 @@ img {
 }
 
 .soft-card {
-  @apply rounded-2xl border border-[#e7ddce] bg-[#fffdf8] p-6 shadow-[0_18px_40px_rgba(38,53,47,0.06)];
+  @apply rounded-lg border border-[#e2e5ec] bg-[#ffffff] p-6 shadow-none;
 }
 
 .primary-button {
-  @apply inline-flex items-center justify-center rounded-full bg-[var(--navy)] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--navy-soft)];
+  @apply inline-flex items-center justify-center rounded-md bg-[var(--navy)] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-[var(--navy-soft)];
 }
 
 .secondary-button {
-  @apply inline-flex items-center justify-center rounded-full border border-[var(--navy)] bg-white px-6 py-3 text-sm font-semibold text-[var(--navy)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50;
+  @apply inline-flex items-center justify-center rounded-md border border-[var(--navy)] bg-white px-6 py-3 text-sm font-semibold text-[var(--navy)] transition-all duration-200 hover:bg-slate-50;
 }
 
 .gold-button {
-  @apply inline-flex items-center justify-center rounded-full bg-[var(--gold)] px-6 py-3 text-sm font-bold text-slate-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e6c56e];
+  @apply inline-flex items-center justify-center rounded-md bg-[var(--gold)] px-6 py-3 text-sm font-bold text-slate-900 transition-all duration-200 hover:bg-[#ffd24d];
 }
 
 .feature-icon {
-  @apply flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f3e4c9] text-xl text-[var(--blue)];
+  @apply flex h-14 w-14 items-center justify-center rounded-lg bg-[#eaf1fb] text-xl text-[var(--blue)];
 }
-
+}

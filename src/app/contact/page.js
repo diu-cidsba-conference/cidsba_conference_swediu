@@ -14,7 +14,7 @@ export default function Contact() {
 
         <div className="mx-auto mt-12 max-w-6xl grid gap-8 lg:grid-cols-2">
           <div className="soft-card p-8 md:p-10">
-            <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Contact information</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Contact information</h2>
             <div className="mt-8 space-y-6">
               <div className="flex items-start gap-4">
                 <div className="feature-icon h-12 w-12 bg-sky-100 text-sky-700">
@@ -64,23 +64,23 @@ export default function Contact() {
           </div>
 
           <div className="soft-card p-8 md:p-10">
-            <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Send a message</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Send a message</h2>
             <form className="mt-8 space-y-5">
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm font-semibold text-slate-700">Name</label>
-                <input type="text" id="name" placeholder="Your name" className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
+                <input type="text" id="name" placeholder="Your name" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
               </div>
               <div>
                 <label htmlFor="email" className="mb-2 block text-sm font-semibold text-slate-700">Email</label>
-                <input type="email" id="email" placeholder="your@email.com" className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
+                <input type="email" id="email" placeholder="your@email.com" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
               </div>
               <div>
                 <label htmlFor="subject" className="mb-2 block text-sm font-semibold text-slate-700">Subject</label>
-                <input type="text" id="subject" placeholder="Message subject" className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
+                <input type="text" id="subject" placeholder="Message subject" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white" />
               </div>
               <div>
                 <label htmlFor="message" className="mb-2 block text-sm font-semibold text-slate-700">Message</label>
-                <textarea id="message" rows="4" placeholder="Tell us how we can help" className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white"></textarea>
+                <textarea id="message" rows="4" placeholder="Tell us how we can help" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white"></textarea>
               </div>
               <button type="submit" className="primary-button w-full justify-center">
                 <FaPaperPlane className="mr-2" /> Send Message
@@ -89,30 +89,30 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mx-auto mt-12 max-w-6xl rounded-[2rem] bg-white p-8 shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
-          <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Conference organizing team</h2>
+        <div className="mx-auto mt-12 max-w-6xl rounded-lg bg-white p-8 shadow-none md:p-10">
+          <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Conference organizing team</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border-l-4 border-sky-500 bg-slate-50 p-4">
+            <div className="rounded-lg border-l-4 border-sky-500 bg-slate-50 p-4">
               <h3 className="text-lg font-bold text-slate-900">General inquiries</h3>
               <p className="mt-2 text-slate-600">Organizing Secretaries</p>
             </div>
-            <div className="rounded-2xl border-l-4 border-sky-500 bg-slate-50 p-4">
+            <div className="rounded-lg border-l-4 border-sky-500 bg-slate-50 p-4">
               <h3 className="text-lg font-bold text-slate-900">Technical issues</h3>
               <p className="mt-2 text-slate-600">Technical Committee</p>
             </div>
-            <div className="rounded-2xl border-l-4 border-sky-500 bg-slate-50 p-4">
+            <div className="rounded-lg border-l-4 border-sky-500 bg-slate-50 p-4">
               <h3 className="text-lg font-bold text-slate-900">Registration</h3>
               <p className="mt-2 text-slate-600">Registration Chairs</p>
             </div>
-            <div className="rounded-2xl border-l-4 border-sky-500 bg-slate-50 p-4">
+            <div className="rounded-lg border-l-4 border-sky-500 bg-slate-50 p-4">
               <h3 className="text-lg font-bold text-slate-900">Publications</h3>
               <p className="mt-2 text-slate-600">Publication Chair</p>
             </div>
           </div>
         </div>
 
-        <div id="travel" className="mx-auto mt-12 max-w-6xl scroll-mt-28 rounded-[2rem] bg-white p-8 shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
-          <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Accommodation & transportation</h2>
+        <div id="travel" className="mx-auto mt-12 max-w-6xl scroll-mt-28 rounded-lg bg-white p-8 shadow-none md:p-10">
+          <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Accommodation & transportation</h2>
           <p className="mt-4 leading-7 text-slate-600">
             To be announced. Details on accommodation options and transportation to the venue will be published here once finalized.
           </p>

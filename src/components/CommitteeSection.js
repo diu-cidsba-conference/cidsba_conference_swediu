@@ -3,11 +3,11 @@ export default function CommitteeSection({ title, members, columns = 2 }) {
     <div className="mb-8">
       <div className="mb-6 flex items-center gap-3">
         <span className="inline-flex h-2.5 w-2.5 rounded-full bg-sky-500" />
-        <h2 className="text-2xl font-black text-slate-900 md:text-3xl">{title}</h2>
+        <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">{title}</h2>
       </div>
       <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-5`}>
         {members.map((member, index) => (
-          <div key={index} className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_12px_30px_rgba(13,27,61,0.04)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(13,27,61,0.08)]">
+          <div key={index} className="rounded-lg border border-slate-200 bg-white p-6 shadow-none transition hover:shadow-none">
             {member.track && (
               <span className="mb-2 inline-block text-xs font-semibold uppercase tracking-[0.14em] text-sky-600">{member.track}</span>
             )}

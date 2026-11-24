@@ -44,10 +44,6 @@ export default function Header() {
     {
       name: 'Speakers',
       href: '/speakers',
-      dropdown: [
-        { name: 'Keynote Speakers', href: '/speakers#keynote' },
-        { name: 'Invited Speakers', href: '/speakers#invited' },
-      ],
     },
     {
       name: 'Authors',
@@ -81,13 +77,13 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-[#e7ddce] bg-[#fffdf8]/95 shadow-lg backdrop-blur-xl' : 'bg-[#fffdf8]/90 shadow-sm backdrop-blur-xl'
+        scrolled ? 'border-b border-[#e2e5ec] bg-[#ffffff]/95 shadow-lg backdrop-blur-xl' : 'bg-[#ffffff]/90 shadow-sm backdrop-blur-xl'
       }`}
     >
       <nav className="container">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex min-w-0 items-center gap-3">
-            <img src="/images/ConferenceLogo.png" alt="CIDSBA 2028 conference logo" className="h-12 w-auto max-w-[240px] object-contain md:h-14" />
+            <img src="/images/ConferenceLogo.png" alt="CIDSSE 2028 conference logo" className="h-14 w-auto object-contain md:h-16" />
           </Link>
 
           <div className="hidden items-center gap-1 xl:flex">
@@ -95,16 +91,16 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <>
-                    <button className="flex items-center rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]">
+                    <button className="flex items-center whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]">
                       {item.name}
                       <FaChevronDown className="ml-1 text-[10px]" />
                     </button>
-                    <div className="invisible absolute left-0 top-full mt-2 w-52 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                    <div className="invisible absolute left-0 top-full mt-2 w-52 rounded-lg border border-slate-200 bg-white p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block rounded-xl px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
+                          className="block rounded-md px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
                         >
                           {subItem.name}
                         </Link>
@@ -114,7 +110,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
+                    className="whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
                   >
                     {item.name}
                   </Link>
@@ -124,8 +120,8 @@ export default function Header() {
           </div>
 
           <div className="hidden items-center gap-3 xl:flex">
-            <img src="/images/diu-logo.png" alt="DIU logo" className="h-12 w-12 rounded-full border border-slate-200 bg-white p-1 shadow-sm" />
-            <Link href="/submission" className="gold-button">
+            <img src="/images/diu-logo.png" alt="DIU logo" className="h-10 w-auto object-contain" />
+            <Link href="/submission" className="gold-button whitespace-nowrap">
               Submit Paper
             </Link>
           </div>
@@ -141,14 +137,14 @@ export default function Header() {
         </div>
 
         {isOpen && (
-          <div className="border-t border-[#e7ddce] pb-4 pt-3 xl:hidden">
+          <div className="border-t border-[#e2e5ec] pb-4 pt-3 xl:hidden">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.dropdown ? (
                   <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                      className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-base font-medium text-slate-700 transition hover:bg-slate-100"
+                      className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-medium text-slate-700 transition hover:bg-slate-100"
                     >
                       {item.name}
                       <FaChevronDown className={`text-[10px] transition ${openDropdown === item.name ? 'rotate-180' : ''}`} />
@@ -159,7 +155,7 @@ export default function Header() {
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block rounded-xl px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-[var(--navy)]"
+                            className="block rounded-md px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-[var(--navy)]"
                             onClick={() => setIsOpen(false)}
                           >
                             {subItem.name}
@@ -171,7 +167,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block rounded-xl px-3 py-2 text-base font-medium text-slate-700 transition hover:bg-slate-100"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-slate-700 transition hover:bg-slate-100"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

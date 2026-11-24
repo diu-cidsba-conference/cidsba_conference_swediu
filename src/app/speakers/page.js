@@ -3,20 +3,19 @@ import { keynoteSpeakers } from '@/data/speakers';
 
 export default function Speakers() {
   return (
-    <div className="section bg-slate-50">
+    <div className="section bg-white">
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Featured speakers</span>
-          <h1 className="section-heading">Meet our distinguished speakers</h1>
-          <p className="section-copy mx-auto">
-            CIDSBA 2028 brings together influential researchers, academics, and industry leaders to share ideas shaping the future of intelligence and data-driven innovation.
+        <div className="max-w-3xl">
+          <span className="section-label">Speakers</span>
+          <h1 className="section-heading">Keynote speakers</h1>
+          <p className="section-copy">
+            CIDSSE 2028 brings together influential researchers, academics, and industry leaders to share ideas shaping the future of intelligence and data-driven innovation.
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-6xl space-y-14">
-          <div>
-            <h2 className="text-center text-3xl font-black text-slate-900 md:text-4xl">Keynote speakers</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12">
+          <div id="keynote" className="scroll-mt-24">
+            <div className="grid gap-5 md:grid-cols-2">
               {keynoteSpeakers.map((speaker) => (
                 <SpeakerCard key={speaker.id} {...speaker} />
               ))}
@@ -24,12 +23,12 @@ export default function Speakers() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-4xl rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-10">
-          <h2 className="text-2xl font-black md:text-3xl">Interested in speaking at the conference?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
-            We welcome experts and researchers who would like to contribute a keynote, invited talk, or panel session.
-          </p>
-          <a href="/contact" className="gold-button mt-8">Contact us</a>
+        <div className="mt-14 flex flex-col gap-4 rounded-lg border border-[#e2e5ec] bg-[#f4f6fa] p-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-[#0b1f4d]">Interested in speaking at the conference?</h2>
+            <p className="mt-1 text-sm text-slate-600">We welcome keynote, invited talk, and panel session proposals.</p>
+          </div>
+          <a href="/contact" className="primary-button whitespace-nowrap">Contact us</a>
         </div>
       </div>
     </div>

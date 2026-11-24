@@ -18,7 +18,7 @@ export default function Sponsors() {
           <div>
             <div className="mb-8 flex items-center justify-center gap-3">
               <FaCrown className="text-3xl text-slate-600" />
-              <h2 className="text-3xl font-black text-slate-900">Platinum sponsors</h2>
+              <h2 className="text-3xl font-semibold text-slate-900">Platinum sponsors</h2>
             </div>
             <SponsorGrid sponsors={platinumSponsors} tier="platinum" />
           </div>
@@ -26,15 +26,15 @@ export default function Sponsors() {
           <div>
             <div className="mb-8 flex items-center justify-center gap-3">
               <FaTrophy className="text-3xl text-amber-500" />
-              <h2 className="text-3xl font-black text-slate-900">Gold sponsors</h2>
+              <h2 className="text-3xl font-semibold text-slate-900">Gold sponsors</h2>
             </div>
             <SponsorGrid sponsors={goldSponsors} tier="gold" />
           </div>
 
           <div>
             <div className="mb-8 flex items-center justify-center gap-3">
-              <FaMedal className="text-3xl text-slate-500" />
-              <h2 className="text-3xl font-black text-slate-900">Silver sponsors</h2>
+              <FaMedal className="text-3xl text-slate-600" />
+              <h2 className="text-3xl font-semibold text-slate-900">Silver sponsors</h2>
             </div>
             <SponsorGrid sponsors={silverSponsors} tier="silver" />
           </div>
@@ -42,28 +42,28 @@ export default function Sponsors() {
           <div>
             <div className="mb-8 flex items-center justify-center gap-3">
               <FaStar className="text-3xl text-orange-500" />
-              <h2 className="text-3xl font-black text-slate-900">Bronze sponsors</h2>
+              <h2 className="text-3xl font-semibold text-slate-900">Bronze sponsors</h2>
             </div>
             <SponsorGrid sponsors={bronzeSponsors} tier="bronze" />
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-5xl rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-12">
-          <h2 className="text-3xl font-black">Become a sponsor</h2>
+        <div className="mx-auto mt-14 max-w-5xl rounded-lg bg-[#0b1f4d] p-8 text-center text-white shadow-none md:p-12">
+          <h2 className="text-3xl font-semibold">Become a sponsor</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
             Partner with a leading academic and industry conference to build visibility, opportunities, and innovation-focused engagement.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
+            <div className="rounded-lg border border-white/15 bg-white/10 p-5">
               <h3 className="text-lg font-bold">Brand visibility</h3>
               <p className="mt-2 text-sm leading-6 text-slate-200">Reach researchers, professionals, and decision-makers from across the region and beyond.</p>
             </div>
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
+            <div className="rounded-lg border border-white/15 bg-white/10 p-5">
               <h3 className="text-lg font-bold">Networking</h3>
               <p className="mt-2 text-sm leading-6 text-slate-200">Connect with leaders in AI, analytics, and digital transformation through extended engagement.</p>
             </div>
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
+            <div className="rounded-lg border border-white/15 bg-white/10 p-5">
               <h3 className="text-lg font-bold">Recognition</h3>
               <p className="mt-2 text-sm leading-6 text-slate-200">Gain visibility across conference materials, promotion, and event participation.</p>
             </div>

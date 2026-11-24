@@ -1,8 +1,8 @@
 export const newsArticles = [
   {
     id: 1,
-    title: "CIDSBA 2028 Call for Papers Announced",
-    excerpt: "We are pleased to announce the call for papers for IEEE CIDSBA 2028. Researchers are invited to submit their original work in computational intelligence, data science, and business applications.",
+    title: "CIDSSE 2028 Call for Papers Announced",
+    excerpt: "We are pleased to announce the call for papers for IEEE CIDSSE 2028. Researchers are invited to submit their original work in computational intelligence, data science, and software engineering.",
     date: "2024-01-15",
     slug: "call-for-papers-announced",
     content: "Full article content here..."
@@ -10,7 +10,7 @@ export const newsArticles = [
   {
     id: 2,
     title: "Early Bird Registration Now Open",
-    excerpt: "Take advantage of our early bird registration rates! Register before the deadline to save on conference fees and secure your spot at CIDSBA 2028.",
+    excerpt: "Take advantage of our early bird registration rates! Register before the deadline to save on conference fees and secure your spot at CIDSSE 2028.",
     date: "2024-01-20",
     slug: "early-bird-registration-open",
     content: "Full article content here..."
@@ -18,7 +18,7 @@ export const newsArticles = [
   {
     id: 3,
     title: "Keynote Speakers Announced",
-    excerpt: "We are thrilled to announce our distinguished keynote speakers for CIDSBA 2028, featuring experts from MIT, Google AI, and Microsoft Research.",
+    excerpt: "We are thrilled to announce our distinguished keynote speakers for CIDSSE 2028, Dr. Mahdi H. Miraz, Dr. Md Baharul Islam, Dr. Miguel Enrique Campusano Araya, and Dr. Mouhaydine Tlemçani.",
     date: "2024-01-25",
     slug: "keynote-speakers-announced",
     content: "Full article content here..."

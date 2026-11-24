@@ -3,16 +3,16 @@ export const faqs = [
     category: "General",
     questions: [
       {
-        question: "What is CIDSBA 2028?",
-        answer: "CIDSBA 2028 is the IEEE International Conference on Computational Intelligence, Data Science and Business Applications, organized by the Department of Software Engineering at Daffodil International University, Bangladesh."
+        question: "What is CIDSSE 2028?",
+        answer: "CIDSSE 2028 is the IEEE International Conference on Computational Intelligence, Data Science and Software Engineering, organized by the Department of Software Engineering at Daffodil International University, Bangladesh."
       },
       {
         question: "When and where will the conference be held?",
-        answer: "The conference will be held at Daffodil International University, Dhaka, Bangladesh. Specific dates will be announced soon."
+        answer: "The conference will be held at Daffodil International University, Dhaka, Bangladesh. The conference dates are 28-29 January 2028."
       },
       {
         question: "Who can attend the conference?",
-        answer: "The conference is open to researchers, academicians, industry professionals, and students interested in computational intelligence, data science, and business applications."
+        answer: "The conference is open to researchers, academicians, industry professionals, and students interested in computational intelligence, data science, and software engineering."
       }
     ]
   },
@@ -71,7 +71,7 @@ export const faqs = [
     questions: [
       {
         question: "Where will the papers be published?",
-        answer: "Accepted papers will be published in IEEE Conference Proceedings and submitted for inclusion in IEEE Xplore Digital Library."
+        answer: "Accepted papers will be published in IEEE Conference Proceedings and submitted for inclusion in the IEEE Xplore Digital Library, subject to meeting IEEE quality and policy requirements."
       },
       {
         question: "Will papers be indexed?",

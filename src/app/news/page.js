@@ -10,13 +10,13 @@ export default function News() {
           <span className="section-label">News</span>
           <h1 className="section-heading">Latest updates and announcements</h1>
           <p className="section-copy mx-auto">
-            Stay informed about key milestones, deadlines, program updates, and conference news from CIDSBA 2028.
+            Stay informed about key milestones, deadlines, program updates, and conference news from CIDSSE 2028.
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-5xl rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-10">
+        <div className="mx-auto mt-12 max-w-5xl rounded-lg bg-[#0b1f4d] p-8 text-center text-white shadow-none md:p-10">
           <FaBell className="mx-auto mb-4 text-5xl text-amber-300" />
-          <h2 className="text-2xl font-black md:text-3xl">Subscribe to updates</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">Subscribe to updates</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
             Get timely announcements about submission deadlines, registration milestones, and conference highlights.
           </p>

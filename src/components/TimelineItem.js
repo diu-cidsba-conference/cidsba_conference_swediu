@@ -1,3 +1,4 @@
+import { FaMapMarkerAlt } from 'react-icons/fa';
 export default function TimelineItem({ time, title, description, speaker, location, type }) {
   const typeColors = {
     keynote: 'bg-purple-100 text-purple-800 border-purple-300',
@@ -18,7 +19,7 @@ export default function TimelineItem({ time, title, description, speaker, locati
         <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
           <div className="flex items-start justify-between mb-3">
             <div>
-              <div className="text-sm text-gray-500 mb-1">{time}</div>
+              <div className="text-sm text-gray-600 mb-1">{time}</div>
               <h3 className="text-xl font-bold text-gray-900">{title}</h3>
             </div>
             <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${typeColors[type] || typeColors.session}`}>
@@ -30,13 +31,13 @@ export default function TimelineItem({ time, title, description, speaker, locati
           )}
           {speaker && (
             <div className="text-sm">
-              <span className="text-gray-500">Speaker:</span>
-              <span className="text-diu-green font-semibold ml-2">{speaker}</span>
+              <span className="text-gray-600">Speaker:</span>
+              <span className="text-[#1a5aa6] font-semibold ml-2">{speaker}</span>
             </div>
           )}
           {location && (
-            <div className="text-sm text-gray-500 mt-1">
-              📍 {location}
+            <div className="text-sm text-gray-600 mt-1">
+              <FaMapMarkerAlt className="mr-1.5 inline" aria-hidden /> {location}
             </div>
           )}
         </div>
