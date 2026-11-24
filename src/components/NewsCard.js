@@ -5,7 +5,7 @@ export default function NewsCard({ title, excerpt, date, slug }) {
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
       <div className="p-6">
-        <div className="flex items-center text-sm text-gray-500 mb-3">
+        <div className="flex items-center text-sm text-gray-600 mb-3">
           <FaCalendar className="mr-2" />
           {new Date(date).toLocaleDateString('en-US', { 
             year: 'numeric', 
@@ -21,7 +21,7 @@ export default function NewsCard({ title, excerpt, date, slug }) {
         </p>
         <Link 
           href={`/news/${slug}`}
-          className="inline-flex items-center text-diu-green font-semibold hover:text-primary-700 transition-colors"
+          className="inline-flex items-center text-[#1a5aa6] font-semibold hover:text-primary-700 transition-colors"
         >
           Read More <FaArrowRight className="ml-2" />
         </Link>

@@ -15,9 +15,9 @@ export const scheduleDay1 = [
   },
   {
     time: "09:30 - 10:30",
-    title: "Keynote Speech 1: The Future of AI in Business Applications",
+    title: "Keynote Speech 1: The Future of AI in Software Engineering",
     speaker: "Dr. John Smith, MIT",
-    description: "An exploration of how artificial intelligence is transforming business operations",
+    description: "An exploration of how artificial intelligence is transforming software engineering practice",
     type: "keynote",
     location: "Main Auditorium"
   },
@@ -64,8 +64,8 @@ export const scheduleDay1 = [
   },
   {
     time: "14:30 - 16:00",
-    title: "Technical Session 2B: Business Applications",
-    description: "Paper presentations on Business Intelligence",
+    title: "Technical Session 2B: Software Engineering",
+    description: "Paper presentations on Software Engineering",
     type: "session",
     location: "Hall B"
   },

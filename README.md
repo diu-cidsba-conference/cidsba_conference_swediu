@@ -1,6 +1,6 @@
-# IEEE CIDSBA 2024 Conference Website
+# IEEE CIDSSE 2028 Conference Website
 
-Official website for the IEEE International Conference on Computational Intelligence, Data Science and Business Applications (CIDSBA) organized by the Department of Software Engineering, Daffodil International University.
+Official website for the IEEE International Conference on Computational Intelligence, Data Science and Software Engineering (CIDSSE) organized by the Department of Software Engineering, Daffodil International University.
 
 ## 🌟 Features
 

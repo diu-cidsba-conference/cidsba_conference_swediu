@@ -31,7 +31,7 @@ export default function PresentationGuidelines() {
           <h1 className="section-heading">Presentation guidelines</h1>
           <p className="section-copy mx-auto">
             Placeholder page — this content is a draft and will be replaced with the final presentation
-            guidelines for CIDSBA 2028.
+            guidelines for CIDSSE 2028.
           </p>
         </div>
 
@@ -41,11 +41,11 @@ export default function PresentationGuidelines() {
               <div className="feature-icon h-12 w-12 bg-sky-100 text-sky-700">
                 <FaMicrophone />
               </div>
-              <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Oral presentation</h2>
+              <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Oral presentation</h2>
             </div>
             <ul className="grid gap-3 md:grid-cols-2">
               {oralGuidelines.map((item) => (
-                <li key={item} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 leading-7 text-slate-700">
+                <li key={item} className="rounded-lg border border-slate-200 bg-slate-50 p-4 leading-7 text-slate-700">
                   {item}
                 </li>
               ))}
@@ -57,11 +57,11 @@ export default function PresentationGuidelines() {
               <div className="feature-icon h-12 w-12 bg-amber-100 text-amber-700">
                 <FaVideo />
               </div>
-              <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Virtual presentation</h2>
+              <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Virtual presentation</h2>
             </div>
             <ul className="grid gap-3 md:grid-cols-2">
               {virtualGuidelines.map((item) => (
-                <li key={item} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 leading-7 text-slate-700">
+                <li key={item} className="rounded-lg border border-slate-200 bg-slate-50 p-4 leading-7 text-slate-700">
                   {item}
                 </li>
               ))}
@@ -70,14 +70,14 @@ export default function PresentationGuidelines() {
 
           <div className="soft-card p-8 md:p-10">
             <div className="mb-6 flex items-center gap-3">
-              <div className="feature-icon h-12 w-12 bg-[#e4eee2] text-[#3c5147]">
+              <div className="feature-icon h-12 w-12 bg-[#eaf1fb] text-[#14306e]">
                 <FaImage />
               </div>
-              <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Poster presentation</h2>
+              <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Poster presentation</h2>
             </div>
             <ul className="grid gap-3 md:grid-cols-2">
               {posterGuidelines.map((item) => (
-                <li key={item} className="rounded-2xl border border-[#e7ddce] bg-[#f3eee4] p-4 leading-7 text-[#5f685f]">
+                <li key={item} className="rounded-lg border border-[#e2e5ec] bg-[#f4f6fa] p-4 leading-7 text-[#4b5563]">
                   {item}
                 </li>
               ))}
@@ -86,17 +86,17 @@ export default function PresentationGuidelines() {
 
           <div className="soft-card p-8 md:p-10">
             <div className="mb-6 flex items-center gap-3">
-              <div className="feature-icon h-12 w-12 bg-[#f3e4c9] text-[#a85c3b]">
+              <div className="feature-icon h-12 w-12 bg-[#fff4cc] text-[#1a6fb8]">
                 <FaFileAlt />
               </div>
-              <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Presentation template</h2>
+              <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Presentation template</h2>
             </div>
             <p className="leading-7 text-slate-600">
               Placeholder text — the official slide template will be linked here once finalized.
             </p>
-            <a href="#" className="mt-6 flex max-w-md items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
+            <a href="#" className="mt-6 flex max-w-md items-center justify-between rounded-lg border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
               <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">PPTX</div>
+                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">PPTX</div>
                 <div className="mt-2 text-lg font-bold text-slate-900">Download slide template</div>
               </div>
               <FaDownload className="text-xl text-sky-700" />

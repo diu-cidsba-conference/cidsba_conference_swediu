@@ -20,8 +20,8 @@ export default function Schedule() {
               <FaCalendarAlt />
             </div>
             <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Date</div>
-              <div className="mt-2 text-xl font-black text-slate-900">28-29 January 2028</div>
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">Date</div>
+              <div className="mt-2 text-xl font-semibold text-slate-900">28-29 January 2028</div>
             </div>
           </div>
           <div className="soft-card flex items-center gap-4">
@@ -29,18 +29,18 @@ export default function Schedule() {
               <FaMapMarkerAlt />
             </div>
             <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Venue</div>
-              <div className="mt-2 text-xl font-black text-slate-900">Daffodil International University, Dhaka</div>
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">Venue</div>
+              <div className="mt-2 text-xl font-semibold text-slate-900">Daffodil International University, Dhaka</div>
             </div>
           </div>
         </div>
 
         <div className="mx-auto mt-12 max-w-5xl">
-          <div className="mb-6 rounded-[1.5rem] bg-[linear-gradient(135deg,#0d1b3d,#1d6fb8)] p-6 text-white">
-            <h2 className="text-2xl font-black md:text-3xl">Day 1 — Research and keynote sessions</h2>
+          <div className="mb-6 rounded-lg bg-[#0b1f4d] p-6 text-white">
+            <h2 className="text-2xl font-semibold md:text-3xl">Day 1 — Research and keynote sessions</h2>
             <p className="mt-2 text-slate-200">Opening keynote, invited talks, and structured technical paper sessions.</p>
           </div>
-          <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(13,27,61,0.05)]">
+          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-none">
             {scheduleDay1.map((item, index) => (
               <TimelineItem key={index} {...item} />
             ))}
@@ -48,19 +48,19 @@ export default function Schedule() {
         </div>
 
         <div className="mx-auto mt-12 max-w-5xl">
-          <div className="mb-6 rounded-[1.5rem] bg-[linear-gradient(135deg,#0a7ca4,#0f5c8b)] p-6 text-white">
-            <h2 className="text-2xl font-black md:text-3xl">Day 2 — Industry and innovation forum</h2>
+          <div className="mb-6 rounded-lg bg-[#0b1f4d] p-6 text-white">
+            <h2 className="text-2xl font-semibold md:text-3xl">Day 2 — Industry and innovation forum</h2>
             <p className="mt-2 text-slate-200">Panel discussions, applications, and closing ceremony.</p>
           </div>
-          <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(13,27,61,0.05)]">
+          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-none">
             {scheduleDay2.map((item, index) => (
               <TimelineItem key={index} {...item} />
             ))}
           </div>
         </div>
 
-        <div className="mx-auto mt-12 max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
-          <h3 className="text-2xl font-black text-slate-900 md:text-3xl">Download the full schedule</h3>
+        <div className="mx-auto mt-12 max-w-4xl rounded-lg bg-white p-8 text-center shadow-none md:p-10">
+          <h3 className="text-2xl font-semibold text-slate-900 md:text-3xl">Download the full schedule</h3>
           <p className="mt-4 text-base leading-7 text-slate-600">
             Access the complete conference agenda in PDF format for planning your participation.
           </p>

@@ -14,6 +14,8 @@ import {
   FaGlobe,
   FaHandshake,
   FaBrain,
+  FaArrowRight,
+  FaUserTie,
 } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -114,20 +116,20 @@ export default function Home() {
       <Hero />
       <CountdownTimer targetDate={new Date('2028-01-28T00:00:00').toISOString()} title="Conference countdown" />
 
-      <section className="section bg-[#fffdf8]">
+      <section className="section bg-[#ffffff]">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <span className="section-label">Why attend</span>
             <h2 className="section-heading">A flagship platform for intelligent innovation</h2>
             <p className="section-copy mx-auto">
-              CIDSBA 2028 brings together technology leaders, academics, and emerging researchers to discuss how computational intelligence and data science are redefining modern business and society.
+              CIDSSE 2028 brings together technology leaders, academics, and emerging researchers to discuss how computational intelligence, data science, and software engineering are redefining modern industry and society.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {features.map((feature, index) => (
-              <Link key={index} href={feature.link} className="soft-card group transition hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(13,27,61,0.08)]">
-                <div className="feature-icon mb-5 transition group-hover:scale-105">{feature.icon}</div>
+              <Link key={index} href={feature.link} className="soft-card group transition hover:shadow-none">
+                <div className="feature-icon mb-5 transition">{feature.icon}</div>
                 <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
                 <p className="mt-3 text-base leading-7 text-slate-600">{feature.description}</p>
               </Link>
@@ -136,17 +138,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section bg-[#f3eee4]">
+      <section className="section bg-[#f4f6fa]">
         <div className="container">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <span className="section-label">About the conference</span>
-              <h2 className="section-heading">Advancing research at the intersection of AI, data science, and business</h2>
+              <h2 className="section-heading">Advancing research at the intersection of AI, data science, and software engineering</h2>
               <p className="section-copy">
-                The IEEE International Conference on Computational Intelligence, Data Science and Business Applications is designed to foster meaningful exchange among researchers, practitioners, and thought leaders working across intelligent systems, analytics, and digital transformation.
+                The IEEE International Conference on Computational Intelligence, Data Science and Software Engineering is designed to foster meaningful exchange among researchers, practitioners, and thought leaders working across intelligent systems, analytics, software systems, and digital transformation.
               </p>
               <p className="section-copy mt-4">
-                Organized by the Department of Software Engineering at Daffodil International University, the event is devoted to impactful solutions, emerging technologies, and interdisciplinary collaboration that influence real business outcomes.
+                Organized by the Department of Software Engineering at Daffodil International University, the event is devoted to impactful solutions, emerging technologies, and interdisciplinary collaboration that influence real-world outcomes.
               </p>
               <div className="mt-8">
                 <Link href="/submission" className="primary-button">
@@ -156,23 +158,23 @@ export default function Home() {
             </div>
 
             <div className="section-shell overflow-hidden p-4 md:p-6">
-              <div className="rounded-[1.75rem] bg-[#3c5147] p-6 text-white">
+              <div className="rounded-lg bg-[#0b1f4d] p-6 text-white">
                 <div className="mb-8 flex items-center justify-between">
                   <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e4eee2]">Theme</div>
-                    <div className="mt-2 text-2xl font-black">Intelligent Growth</div>
+                    <div className="font-mono text-xs uppercase tracking-wider text-[#c9d3ea]">Theme</div>
+                    <div className="mt-2 text-2xl font-semibold">Intelligent Growth</div>
                   </div>
-                  <FaBullhorn className="text-3xl text-[#e6c78f]" />
+                  <FaBullhorn className="text-3xl text-[#f5c542]" />
                 </div>
 
                 <div className="space-y-4">
                   {reasons.map((reason) => (
-                    <div key={reason.title} className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                    <div key={reason.title} className="rounded-lg border border-white/20 bg-white/5 p-4">
                       <div className="flex items-start gap-3">
-                        <div className="mt-0.5 rounded-xl bg-white/15 p-2 text-white">{reason.icon}</div>
+                        <div className="mt-0.5 shrink-0 rounded-md bg-white p-2.5 text-[#0b1f4d]">{reason.icon}</div>
                         <div>
-                          <h3 className="text-lg font-bold">{reason.title}</h3>
-                          <p className="mt-2 text-sm leading-6 text-slate-200">{reason.text}</p>
+                          <h3 className="text-lg font-semibold text-white">{reason.title}</h3>
+                          <p className="mt-1.5 text-sm leading-6 text-[#dbe4f5]">{reason.text}</p>
                         </div>
                       </div>
                     </div>
@@ -184,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section bg-[#fffdf8]">
+      <section className="section bg-[#ffffff]">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <span className="section-label">Conference statistics</span>
@@ -193,16 +195,16 @@ export default function Home() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {stats.map((item) => (
-              <div key={item.label} className="soft-card bg-[#3c5147] text-center text-white">
-                <div className="text-4xl font-black text-[#e6c78f]">{item.value}</div>
-                <div className="mt-3 text-sm font-medium uppercase tracking-[0.15em] text-[#d9e1d8]">{item.label}</div>
+              <div key={item.label} className="rounded-lg bg-[#0b1f4d] p-6 text-center text-white">
+                <div className="text-4xl font-semibold text-[#f5c542]">{item.value}</div>
+                <div className="mt-3 text-sm font-medium uppercase tracking-[0.15em] text-[#c9d3ea]">{item.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section bg-[#f3eee4]">
+      <section className="section bg-[#f4f6fa]">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <span className="section-label">Key topics</span>
@@ -211,13 +213,13 @@ export default function Home() {
 
           <div id="tracks" className="mt-12 space-y-5">
             {tracks.map((track, index) => (
-              <div key={track.title} className="rounded-[1.5rem] border border-[#e7ddce] bg-[#fffdf8] p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md md:p-6">
+              <div key={track.title} className="rounded-lg border border-[#e2e5ec] bg-[#ffffff] p-5 shadow-sm transition hover:shadow-md md:p-6">
                 <div className="flex items-start gap-4">
-                  <span className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#e4eee2] text-base font-black text-[#3c5147]">
+                  <span className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#eaf1fb] text-base font-semibold text-[#14306e]">
                     {index + 1}
                   </span>
                   <div>
-                    <h3 className="text-lg font-black text-slate-900 md:text-xl">{track.title}</h3>
+                    <h3 className="text-lg font-semibold text-slate-900 md:text-xl">{track.title}</h3>
                     <p className="mt-2 text-base leading-7 text-slate-600">{track.description}</p>
                   </div>
                 </div>
@@ -227,7 +229,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section bg-[#f3eee4]">
+      <section className="section bg-[#f4f6fa]">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <span className="section-label">Event timeline</span>
@@ -237,62 +239,74 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {dates.map((item, index) => (
-              <div key={item.label} className="relative overflow-hidden rounded-[1.75rem] border border-[#e7ddce] bg-[#fffdf8] p-5 shadow-[0_18px_40px_rgba(38,53,47,0.05)]">
-                <div className="mb-5 flex items-center justify-between">
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] ${item.accent}`}>
-                    Phase {index + 1}
+          <ol className="relative mt-14 grid gap-10 md:grid-cols-5 md:gap-0">
+            <div className="absolute bottom-2 left-[15px] top-2 w-0.5 bg-[#0b1f4d]/20 md:hidden" aria-hidden />
+            <div className="absolute left-[10%] right-[10%] top-[calc(50%-1px)] hidden h-0.5 bg-[#0b1f4d]/20 md:block" aria-hidden />
+            {dates.map((item, index) => {
+              const last = index === dates.length - 1;
+              const m = item.value.match(/^([\d–-]+)\s+(\w+)\s+(\d{4})$/);
+              const [day, month, year] = m ? [m[1], m[2], m[3]] : [item.value, '', ''];
+              return (
+                <li key={item.label} className="relative grid pl-12 md:grid-rows-[1fr_auto_1fr] md:pl-0 md:text-center">
+                  <div className="md:flex md:flex-col md:justify-end md:pb-6">
+                    <p className="text-3xl font-semibold leading-none text-[#0b1f4d]" style={{ fontFamily: 'var(--font-serif), Georgia, serif' }}>
+                      {day} <span className="text-lg font-medium text-slate-600">{month}</span>
+                    </p>
+                    <p className="mt-1 font-mono text-xs tracking-wider text-slate-600">{year}</p>
+                  </div>
+                  <span className={`absolute left-0 top-0 z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-white md:static md:mx-auto ${last ? 'border-[#f5b800]' : 'border-[#0b1f4d]'}`} aria-hidden>
+                    <span className={`h-3 w-3 rounded-full ${last ? 'bg-[#f5b800]' : 'bg-[#0b1f4d]'}`} />
                   </span>
-                  <FaCalendarAlt className="text-lg text-[#a85c3b]" />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900">{item.label}</h3>
-                <p className="mt-4 text-3xl font-black tracking-tight text-slate-900">{item.value}</p>
-              </div>
-            ))}
-          </div>
+                  <h3 className="mt-2 text-sm font-semibold text-[#0b1f4d] md:px-3 md:pt-6">{item.label}</h3>
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </section>
 
-      <section className="section bg-[#fffdf8]">
+      <section className="section bg-[#ffffff]">
         <div className="container">
-          <div className="rounded-[2rem] border border-[#3c5147] bg-[#3c5147] p-8 text-white shadow-[0_25px_70px_rgba(38,53,47,0.14)] md:p-10">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-2xl">
-                <span className="inline-flex rounded-full border border-[#e4eee2]/40 bg-[#e4eee2]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#e4eee2]">
-                  Sponsors & partners
-                </span>
-                <h2 className="mt-4 text-3xl font-black md:text-4xl">Supporting innovation in AI, analytics, and digital transformation</h2>
-              </div>
-              <Link href="/sponsors" className="gold-button whitespace-nowrap">
-                View All Partners
-              </Link>
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <span className="section-label">Sponsors &amp; partners</span>
+              <h2 className="section-heading">Supported by IEEE CIS and the Department of Software Engineering, DIU</h2>
             </div>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-              {[
-                'IEEE CIS',
-                'AI Task Force',
-                'Dept of SWE, DIU',
-                'Data Science Lab, Dept of SWE, DIU',
-                'Software Engineering Club, Dept of SWE, DIU',
-                'SQAT, Dept of SWE, DIU',
-              ].map((name) => (
-                <div key={name} className="rounded-2xl border border-white/15 bg-white/8 px-4 py-5 text-center text-xs font-semibold uppercase tracking-[0.14em] text-slate-100 backdrop-blur-sm">
-                  {name}
-                </div>
-              ))}
-            </div>
+            <Link href="/sponsors" className="secondary-button whitespace-nowrap">
+              View all partners <FaArrowRight className="ml-2" aria-hidden />
+            </Link>
           </div>
+
+          <ul className="mt-10 grid gap-px overflow-hidden rounded-lg border border-[#e2e5ec] bg-[#e2e5ec] sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: 'IEEE CIS', short: 'CIS' },
+              { name: 'AI Task Force', logo: '/images/partners/ai-task-force.png' },
+              { name: 'Dept of SWE, DIU', logo: '/images/partners/swe-dept.png' },
+              { name: 'Data Science Lab, Dept of SWE, DIU', logo: '/images/partners/data-science-lab.png' },
+              { name: 'Software Engineering Club, Dept of SWE, DIU', logo: '/images/partners/se-club.png' },
+              { name: 'SQAT, Dept of SWE, DIU', logo: '/images/partners/sqat.png' },
+            ].map(({ name, logo, short }) => (
+              <li key={name} className="flex items-center gap-4 bg-white p-5">
+                <div className="flex h-20 w-36 shrink-0 items-center justify-center overflow-hidden rounded-md border border-[#e2e5ec] bg-white p-2">
+                  {logo ? (
+                    <img src={logo} alt="" className="max-h-full max-w-full object-contain" />
+                  ) : (
+                    <span className="font-mono text-lg font-semibold text-[#1a5aa6]">{short}</span>
+                  )}
+                </div>
+                <span className="text-sm font-semibold leading-snug text-[#0b1f4d]">{name}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <section className="section bg-[#26352f] text-white">
+      <section className="section bg-[#0b1f4d] text-white">
         <div className="container text-center">
-          <span className="section-label border-[#e4eee2]/40 bg-[#e4eee2]/10 text-[#e4eee2]">Call for papers</span>
-          <h2 className="section-heading mt-6 text-white">Be part of the next wave of computational innovation</h2>
+          <span className="section-label !text-[#f5c542]">Call for papers</span>
+          <h2 className="section-heading mt-4 text-white">Be part of the next wave of computational innovation</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
-            Submit your latest research in computational intelligence, data science, business intelligence, and AI-driven decision systems to engage with an international academic audience.
+            Submit your latest research in computational intelligence, data science, software engineering, and AI-driven decision systems to engage with an international academic audience.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/submission" className="gold-button">Submit Paper</Link>
@@ -301,28 +315,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="messages" className="section bg-[#e4eee2]">
+      <section id="messages" className="section bg-[#eaf1fb]">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <span className="section-label">Conference leadership</span>
               <h2 className="section-heading">Messages that set the direction</h2>
             </div>
-            <p className="section-copy mt-0">Hear from the people shaping CIDSBA 2028, its research community, and the conversations we hope to carry forward.</p>
+            <p className="section-copy mt-0">Hear from the people shaping CIDSSE 2028, its research community, and the conversations we hope to carry forward.</p>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-[#cfd6e4] bg-[#cfd6e4] md:grid-cols-3">
             {['Chief Guest', 'Chief Patron & Patrons', 'Conference Chairs'].map((title) => (
-              <div key={title} className="soft-card border-[#d1dfce]">
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#a85c3b]">Message</span>
-                <h3 className="mt-4 text-xl font-black text-[#26352f]">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#6e746b]">The welcome message and conference perspective will be published here.</p>
+              <div key={title} className="flex items-center gap-4 bg-white p-6">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#eaf1fb] text-xl text-[#1a5aa6]">
+                  <FaUserTie aria-hidden />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold leading-snug text-[#0b1f4d]">{title}</h3>
+                  <p className="mt-1 text-sm text-slate-600">Message to be published</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="events" className="section bg-[#fffdf8]">
+      <section id="events" className="section bg-[#ffffff]">
         <div className="container grid gap-8 lg:grid-cols-2">
           <div>
             <span className="section-label">Co-located events</span>
@@ -330,16 +348,16 @@ export default function Home() {
             <p className="section-copy">Meet the community beyond the paper session through focused workshops, tutorials, and partner-led events.</p>
             <Link href="/contact#events" className="primary-button mt-7">Propose an Event</Link>
           </div>
-          <div className="rounded-[2rem] bg-[#26352f] p-8 text-[#fffdf8]">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e6c78f]">While you are here</span>
-            <h3 className="mt-4 text-2xl font-black">Discover Savar and Dhaka</h3>
-            <p className="mt-4 leading-8 text-[#d9e1d8]">Plan time for local history, riverfront walks, Bengali cuisine, and the cultural energy surrounding Daffodil Smart City.</p>
-            <Link href="#local-attraction" className="mt-6 inline-flex font-bold text-[#e6c78f]">Explore places to visit →</Link>
+          <div className="rounded-lg bg-[#0b1f4d] p-8 text-[#ffffff]">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c542]">While you are here</span>
+            <h3 className="mt-4 text-2xl font-semibold">Discover Savar and Dhaka</h3>
+            <p className="mt-4 leading-8 text-[#c9d3ea]">Plan time for local history, riverfront walks, Bengali cuisine, and the cultural energy surrounding Daffodil Smart City.</p>
+            <Link href="#local-attraction" className="mt-6 inline-flex font-bold text-[#f5c542]">Explore places to visit <FaArrowRight className="ml-2 self-center" aria-hidden /></Link>
           </div>
         </div>
       </section>
 
-      <section id="local-attraction" className="section bg-[#f3eee4]">
+      <section id="local-attraction" className="section bg-[#f4f6fa]">
         <div className="container">
           <div>
             <span className="section-label">Local attraction</span>
@@ -351,29 +369,29 @@ export default function Home() {
               {
                 name: 'Lalbagh Fort',
                 detail: 'A Mughal-era fort complex in Old Dhaka.',
-                image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lalbagh%20Fort.jpg?width=800',
+                image: '/images/places/lalbagh.jpg',
               },
               {
                 name: 'Ahsan Manzil',
                 detail: 'The historic Pink Palace beside the Buriganga River.',
-                image: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlFQPbKOhodZIdFLjX0laEWsa7kO6hBUHxA8ZNS48WKo-E_O8nriFg-_3s2VBYhvNeiUPbp7e3S1XaXej0--EqNcIr-Z3zGzFLgdUDGWVJMLXw0tGSa6VRDSZQMygoqX-IO-rKy=s680-w680-h510-rw',
+                image: '/images/places/ahsan-manzil.jpg',
               },
               {
                 name: 'National Parliament',
                 detail: 'Louis Kahn\'s landmark of modern architecture.',
-                image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Jatiya%20Sangsad%20Bhaban.jpg?width=800',
+                image: '/images/places/parliament.jpg',
               },
               {
                 name: 'Daffodil Smart City',
-                detail: 'The green, connected campus hosting CIDSBA 2028.',
-                image: 'https://daffodilvarsity.edu.bd/images/hero.jpg',
+                detail: 'The green, connected campus hosting CIDSSE 2028.',
+                image: '/images/places/daffodil.jpg',
               },
             ].map((place) => (
-              <article key={place.name} className="overflow-hidden rounded-2xl border border-[#e7ddce] bg-[#fffdf8] shadow-sm">
+              <article key={place.name} className="overflow-hidden rounded-lg border border-[#e2e5ec] bg-[#ffffff] shadow-sm">
                 <img src={place.image} alt={place.name} className="aspect-[4/3] w-full object-cover" />
                 <div className="p-5">
-                  <h3 className="text-lg font-black text-[#26352f]">{place.name}</h3>
-                  <p className="mt-2 text-sm leading-6 text-[#6e746b]">{place.detail}</p>
+                  <h3 className="text-lg font-semibold text-[#0b1f4d]">{place.name}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#6b7280]">{place.detail}</p>
                 </div>
               </article>
             ))}
@@ -381,7 +399,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="announcement" className="section bg-[#f3e4c9]">
+      <section id="announcement" className="section bg-[#eaf1fb]">
         <div className="container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <span className="section-label">Conference materials</span>

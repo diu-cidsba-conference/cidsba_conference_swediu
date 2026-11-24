@@ -29,14 +29,14 @@ export default function FAQ() {
         <div className="mx-auto mt-12 max-w-5xl space-y-10">
           {faqs.map((section, sectionIndex) => (
             <div key={sectionIndex}>
-              <h2 className="mb-6 text-2xl font-black text-slate-900 md:text-3xl">{section.category}</h2>
+              <h2 className="mb-6 text-2xl font-semibold text-slate-900 md:text-3xl">{section.category}</h2>
               <div className="space-y-4">
                 {section.questions.map((item, itemIndex) => {
                   const key = `${section.category}-${itemIndex}`;
                   const isOpen = openItems[key];
 
                   return (
-                    <div key={itemIndex} className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_14px_30px_rgba(13,27,61,0.04)]">
+                    <div key={itemIndex} className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-none">
                       <button
                         onClick={() => toggleItem(section.category, itemIndex)}
                         className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition hover:bg-slate-50"
@@ -57,8 +57,8 @@ export default function FAQ() {
           ))}
         </div>
 
-        <div className="mx-auto mt-14 max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
-          <h3 className="text-2xl font-black text-slate-900 md:text-3xl">Still have questions?</h3>
+        <div className="mx-auto mt-14 max-w-4xl rounded-lg bg-white p-8 text-center shadow-none md:p-10">
+          <h3 className="text-2xl font-semibold text-slate-900 md:text-3xl">Still have questions?</h3>
           <p className="mt-4 text-base leading-7 text-slate-600">
             Reach out to our organizing team for more information about the conference and participation details.
           </p>

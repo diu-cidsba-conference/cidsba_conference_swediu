@@ -29,14 +29,14 @@ export default function Committees() {
           <span className="section-label">Leadership</span>
           <h1 className="section-heading">Conference committees</h1>
           <p className="section-copy mx-auto">
-            Meet the distinguished team steering CIDSBA 2028 through academic excellence, technical rigor, and organizing leadership.
+            Meet the distinguished team steering CIDSSE 2028 through academic excellence, technical rigor, and organizing leadership.
           </p>
         </div>
 
         <div className="mx-auto mt-12 max-w-6xl space-y-10">
           <div className="soft-card p-8 md:p-10">
-            <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Chief patron</h2>
-            <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Chief patron</h2>
+            <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-6">
               <h3 className="text-xl font-bold text-slate-900">{patronData.chiefPatron.name}</h3>
               <p className="mt-2 text-slate-600">{patronData.chiefPatron.designation}</p>
             </div>
@@ -51,14 +51,14 @@ export default function Committees() {
           <CommitteeSection title="Conference co-chairs" members={conferenceCoChairs} columns={2} />
 
           <div className="soft-card p-8 md:p-10">
-            <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Organizing committee</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Organizing committee</h2>
           </div>
           <CommitteeSection title="Organizing chairs" members={organizingChairs} columns={2} />
           <CommitteeSection title="Organizing co-chairs" members={organizingCoChairs} columns={2} />
           <CommitteeSection title="Organizing secretaries" members={organizingSecretaries} columns={2} />
 
           <div className="soft-card p-8 md:p-10">
-            <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Technical committee</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">Technical committee</h2>
           </div>
           <CommitteeSection title="Technical chairs" members={technicalChairs} columns={2} />
           <CommitteeSection title="Technical co-chairs" members={technicalCoChairs} columns={2} />

@@ -33,25 +33,23 @@ export default function CountdownTimer({ targetDate, title = 'Conference Countdo
   }, [targetDate]);
 
   const TimeUnit = ({ value, label }) => (
-    <div className="flex flex-col items-center">
-      <div className="w-[clamp(48px,17vw,100px)] rounded-xl bg-[#fffdf8] p-2 shadow-lg sm:p-4 md:p-5">
-        <div className="text-2xl font-black text-[#a85c3b] sm:text-3xl md:text-5xl">{value.toString().padStart(2, '0')}</div>
-      </div>
-      <div className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-white md:text-base">{label}</div>
+    <div className="min-w-[64px] text-center sm:min-w-[96px]">
+      <div className="font-mono text-4xl font-medium tabular-nums text-white md:text-6xl">{value.toString().padStart(2, '0')}</div>
+      <div className="mt-2 font-mono text-xs uppercase tracking-wider text-[#c9d3ea]">{label}</div>
     </div>
   );
 
   return (
-    <div className="bg-[#3c5147] py-10 sm:py-12">
+    <div className="bg-[#0b1f4d] py-10 sm:py-12">
       <div className="container mx-auto px-3 sm:px-4">
-        <h2 className="mb-8 text-center text-2xl font-black text-white md:text-3xl">{title}</h2>
-        <div className="flex items-start justify-center gap-0.5 sm:gap-4 md:gap-8">
+        <h2 className="mb-8 text-center text-2xl font-semibold text-white md:text-3xl">{title}</h2>
+        <div className="flex items-start justify-center gap-2 sm:gap-6 md:gap-10">
           <TimeUnit value={timeLeft.days} label="Days" />
-          <div className="pt-3 text-xl font-black text-[#e4eee2] sm:pt-4 sm:text-3xl md:pt-5 md:text-5xl">:</div>
+          <div className="font-mono text-3xl text-[#5b7bbf] md:text-5xl">:</div>
           <TimeUnit value={timeLeft.hours} label="Hours" />
-          <div className="pt-3 text-xl font-black text-[#e4eee2] sm:pt-4 sm:text-3xl md:pt-5 md:text-5xl">:</div>
+          <div className="font-mono text-3xl text-[#5b7bbf] md:text-5xl">:</div>
           <TimeUnit value={timeLeft.minutes} label="Minutes" />
-          <div className="pt-3 text-xl font-black text-[#e4eee2] sm:pt-4 sm:text-3xl md:pt-5 md:text-5xl">:</div>
+          <div className="font-mono text-3xl text-[#5b7bbf] md:text-5xl">:</div>
           <TimeUnit value={timeLeft.seconds} label="Seconds" />
         </div>
       </div>
